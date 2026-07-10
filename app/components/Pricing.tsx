@@ -3,8 +3,6 @@
 import { Check } from "lucide-react";
 import { Reveal, StaggerGroup, StaggerItem } from "./Reveal";
 
-// TODO: prețuri exacte de completat — deocamdată fără cifre inventate.
-// Structura e gata, doar adaugă `price: "XXX lei"` la fiecare tier.
 const TIERS = [
   {
     name: "Demo",
@@ -14,7 +12,7 @@ const TIERS = [
   },
   {
     name: "Site prezentare",
-    price: "Preț la cerere",
+    price: "799 lei",
     highlight: true,
     features: [
       "Site complet, gata în 3 zile",
@@ -24,7 +22,7 @@ const TIERS = [
   },
   {
     name: "Site + mentenanță",
-    price: "Preț la cerere",
+    price: "799 lei + 99 lei/lună",
     highlight: false,
     features: ["Tot din pachetul Site prezentare", "Actualizări continue", "Suport direct pe WhatsApp"],
   },
@@ -38,11 +36,12 @@ export default function Pricing() {
           Prețuri
         </div>
         <h2 className="font-display font-bold text-[28px] md:text-[32px] tracking-tight mb-2">
-          Simplu: vezi demo-ul, apoi discutăm prețul
+          Simplu, fără cifre ascunse
         </h2>
         <p className="text-muted text-[15px] max-w-[54ch]">
-          Costul final depinde de câte pagini și funcționalități are afacerea
-          ta — îl stabilim clar, împreună, după ce vezi demo-ul.
+          Prețul de mai jos e pentru un site standard de prezentare. Dacă
+          afacerea ta are nevoie de mai multe pagini sau funcționalități,
+          stabilim clar costul suplimentar după ce vezi demo-ul.
         </p>
       </Reveal>
 
