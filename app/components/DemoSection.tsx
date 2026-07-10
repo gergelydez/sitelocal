@@ -13,7 +13,7 @@ export default function DemoSection() {
             Primește gratuit demo-ul tău
           </h2>
           <p className="text-center text-muted text-[14px] mb-7">
-            Completezi acum, primești schița site-ului tău în 3 zile.
+            Completezi acum, primești demo-ul live al site-ului tău în 24h.
           </p>
           <LeadForm />
         </div>

@@ -11,13 +11,38 @@ Design dark, glassmorphism, gradient (violet/cyan/roz), animat cu Framer Motion 
 - `app/components/Navbar.tsx` — navbar glass, sticky
 - `app/components/Hero.tsx` — hero + elementul semnătură (cardul browser cu inel gradient rotativ + morph 404→site)
 - `app/components/Marquee.tsx` — bandă cu tipuri de afaceri, scroll infinit
-- `app/components/HowItWorks.tsx` — cei 3 pași zero-risc
+- `app/components/TrustSection.tsx` — 4 motive de încredere (zero risc, local, preț corect, suport direct)
+- `app/components/HowItWorks.tsx` — cei 3 pași zero-risc (demo în 24h, site complet în 3 zile)
 - `app/components/Niches.tsx` — nișele pe care le validăm (auto, horeca, saloane/clinici, meseriași)
+- `app/components/ProjectsShowcase.tsx` — carusel cu concepte vizuale ilustrative pe nișă (nu capturi de la clienți reali)
+- `app/components/Testimonials.tsx` — recenzii clienți; **array `REVIEWS` gol intenționat** — vezi nota de mai jos
+- `app/components/Pricing.tsx` — 3 pachete de preț; **cifrele sunt de completat** — vezi nota de mai jos
 - `app/components/CTABanner.tsx` — banner CTA intermediar
 - `app/components/FAQ.tsx` — accordion animat (height + fade)
 - `app/components/DemoSection.tsx` + `LeadForm.tsx` — formularul, trimite datele + evenimentul Pixel din browser
-- `app/components/WhatsAppButton.tsx` — buton flotant WhatsApp, colț dreapta-jos
+- `app/components/WhatsAppButton.tsx` — buton flotant WhatsApp, colț dreapta-jos, trimite evenimentul `Contact`
+- `app/components/TiltCard.tsx` — wrapper pentru efectul de tilt 3D la hover (carduri interactive)
 - `app/components/Reveal.tsx` — wrapper-e reutilizabile pentru animații scroll-triggered
+- `app/formular/` — pagină separată, doar cu formularul (pentru trafic din reclame); trimite evenimentul `ViewContent` și lasă vizitatorul să exploreze restul site-ului dintr-un link
+- `app/lib/meta.ts` — helper comun pentru trimiterea evenimentelor către Meta Conversions API
+- `app/lib/pixel-client.ts` — helper client-side pentru evenimente `Contact`/`ViewContent`, cu event_id comun
+
+## De completat cu date reale
+
+- **Prețuri** (`app/components/Pricing.tsx`): pachetele "Site prezentare" și "Site + mentenanță" au `price: "Preț la cerere"` — înlocuiește cu cifrele tale reale de îndată ce le stabilești.
+- **Recenzii** (`app/components/Testimonials.tsx`): array-ul `REVIEWS` e gol intenționat — nu am inventat citate sau nume de clienți (recenziile false sunt ilegale în UE și riscă suspendarea contului de Meta Ads). Adaugă recenzii reale în array pe măsură ce le primești; secțiunea devine automat un carusel.
+- **Proiecte** (`app/components/ProjectsShowcase.tsx`): sunt concepte vizuale ilustrative, nu capturi de la site-uri reale. Dacă ai site-uri anterioare pe care vrei să le arăți, trimite-mi linkurile/capturile și le integrez ca portofoliu real.
+
+## Meta Pixel — evenimente trackuite
+
+Fiecare eveniment se trimite dublu (Pixel din browser + Conversions API server-side), cu **același `event_id`**, ca Meta să dedupleze corect și să nu numere conversia de două ori:
+
+- `PageView` — automat, pe fiecare încărcare de pagină (`app/layout.tsx`)
+- `Lead` — la trimiterea formularului (`LeadForm.tsx` → `/api/lead`)
+- `Contact` — la click pe butonul flotant de WhatsApp (`WhatsAppButton.tsx` → `/api/track`)
+- `ViewContent` — la vizitarea paginii `/formular` (`FormularClient.tsx` → `/api/track`)
+
+Pixel ID-ul (`1983304235646415`) e hardcodat ca fallback în `app/layout.tsx` și `app/lib/meta.ts`, deci funcționează fără nicio configurare suplimentară. `META_CAPI_ACCESS_TOKEN` rămâne opțional — fără el, evenimentele merg doar prin Pixel-ul din browser, nu și prin Conversions API.
 - `app/api/lead/route.ts` — ruta server care primește lead-ul și-l trimite către Meta Conversions API
 - `app/layout.tsx` — include scriptul de Meta Pixel
 

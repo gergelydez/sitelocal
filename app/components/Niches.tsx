@@ -32,7 +32,7 @@ const NICHES = [
 
 export default function Niches() {
   return (
-    <section className="max-w-[1120px] mx-auto px-6 py-20 md:py-24">
+    <section id="nise" className="max-w-[1120px] mx-auto px-6 py-20 md:py-24">
       <Reveal>
         <div className="text-trust text-[12.5px] font-semibold uppercase tracking-wider mb-3">
           Pentru cine construim

@@ -35,16 +35,25 @@ export default function LeadForm() {
       domeniu: (form.elements.namedItem("domeniu") as HTMLSelectElement).value,
     };
 
+    // Un singur event_id, împărțit între Pixel-ul din browser și Conversions API
+    // (server) — altfel Meta numără lead-ul de două ori.
+    const eventId = crypto.randomUUID();
+
     try {
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, eventId }),
       });
       if (!res.ok) throw new Error("Request failed");
 
       if (typeof window !== "undefined" && window.fbq) {
-        window.fbq("track", "Lead", { content_name: data.domeniu });
+        window.fbq(
+          "track",
+          "Lead",
+          { content_name: data.domeniu, company_name: data.firma },
+          { eventID: eventId }
+        );
       }
       setStatus("done");
     } catch {
@@ -70,8 +79,8 @@ export default function LeadForm() {
             Perfect, ai intrat!
           </h3>
           <p className="text-muted text-sm mb-5">
-            În maximum 3 zile primești gratuit prima schiță a site-ului tău,
-            live.
+            În maximum 24 de ore primești gratuit demo-ul live al site-ului
+            tău. Îți place? Site-ul complet e gata în doar 3 zile.
           </p>
           <a
             href="https://wa.me/40700000000"
