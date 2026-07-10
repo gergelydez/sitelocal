@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { trackEvent } from "../lib/pixel-client";
 
-const WHATSAPP_NUMBER = "40700000000";
+const WHATSAPP_NUMBER = "40758656192";
 const MESSAGE = "Salut! Aș vrea să văd cum ar arăta site-ul afacerii mele.";
 
 export default function WhatsAppButton() {

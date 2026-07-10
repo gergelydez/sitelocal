@@ -87,7 +87,7 @@ export default function LeadForm() {
             tău. Îți place? Site-ul complet e gata în doar 3 zile.
           </p>
           <a
-            href="https://wa.me/40700000000"
+            href="https://wa.me/40758656192"
             className="inline-block font-semibold text-[14px] text-trust hover:text-trust/80 transition-colors"
           >
             Sau scrie-mi acum direct pe WhatsApp →

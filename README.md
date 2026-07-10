@@ -32,7 +32,7 @@ Design dark, glassmorphism, gradient (violet/cyan/roz), animat cu Framer Motion 
 
 ## De completat cu date reale
 
-- **Prețuri** (`app/components/Pricing.tsx`): pachetele "Site prezentare" și "Site + mentenanță" au `price: "Preț la cerere"` — înlocuiește cu cifrele tale reale de îndată ce le stabilești.
+- **Prețuri** (`app/components/Pricing.tsx`): "Site prezentare" e la 799 lei (valoarea ta). Prețul de "Site + mentenanță" (799 lei + 99 lei/lună) e o sugestie a mea, nu o cifră pe care mi-ai confirmat-o — ajustează-l dacă vrei altă sumă pentru mentenanța lunară.
 - **Recenzii** (`app/components/Testimonials.tsx`): array-ul `REVIEWS` e gol intenționat — nu am inventat citate sau nume de clienți (recenziile false sunt ilegale în UE și riscă suspendarea contului de Meta Ads). Adaugă recenzii reale în array pe măsură ce le primești; secțiunea devine automat un carusel.
 - **Proiecte** (`app/components/ProjectsShowcase.tsx`): sunt concepte vizuale ilustrative, nu capturi de la site-uri reale. Dacă ai site-uri anterioare pe care vrei să le arăți, trimite-mi linkurile/capturile și le integrez ca portofoliu real.
 
@@ -117,6 +117,6 @@ Pe lângă email, fiecare lead se salvează și într-o bază de date Postgres, 
 
 ## Numărul de WhatsApp
 
-Numărul apare în trei locuri — caută `40700000000` și înlocuiește-l cu numărul tău real (format internațional, fără +):
+Setat la `40758656192` în două locuri — dacă se schimbă vreodată, caută acest număr și înlocuiește-l:
 - `app/components/WhatsAppButton.tsx` (butonul flotant)
 - `app/components/LeadForm.tsx` (mesajul de succes după trimiterea formularului)
