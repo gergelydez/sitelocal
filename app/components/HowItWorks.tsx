@@ -11,25 +11,25 @@ const STEPS = [
   },
   {
     num: "02",
-    title: "Construiesc o schiță live",
-    text: "În maximum 3 zile ai o variantă demo, personalizată 100% pe afacerea ta reală.",
+    title: "Primești demo-ul în 24h",
+    text: "O schiță live, personalizată 100% pe afacerea ta reală — gata în maximum 24 de ore.",
   },
   {
     num: "03",
     title: "Decizi tu, fără risc",
-    text: "Îți place? O cumperi la un preț corect. Nu-ți place? Rămâi cu ideile și nu plătești nimic.",
+    text: "Îți place demo-ul? Site-ul complet e gata în 3 zile. Nu-ți place? Rămâi cu ideile și nu plătești nimic.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="max-w-[1120px] mx-auto px-6 py-20 md:py-28">
+    <section id="cum-functioneaza" className="max-w-[1120px] mx-auto px-6 py-20 md:py-28">
       <Reveal>
         <div className="text-trust text-[12.5px] font-semibold uppercase tracking-wider mb-3">
           Zero risc
         </div>
         <h2 className="font-display font-bold text-[28px] md:text-[34px] max-w-[24ch] mb-12 tracking-tight">
-          Trei pași, fără complicații — și fără să plătești în avans
+          Demo în 24h, site complet în 3 zile — fără să plătești în avans
         </h2>
       </Reveal>
 

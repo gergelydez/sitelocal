@@ -2,11 +2,16 @@ import AmbientBackground from "./components/AmbientBackground";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
+import TrustSection from "./components/TrustSection";
 import HowItWorks from "./components/HowItWorks";
 import Niches from "./components/Niches";
+import ProjectsShowcase from "./components/ProjectsShowcase";
+import Testimonials from "./components/Testimonials";
+import Pricing from "./components/Pricing";
 import CTABanner from "./components/CTABanner";
 import FAQ from "./components/FAQ";
 import DemoSection from "./components/DemoSection";
+import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function Home() {
@@ -17,14 +22,16 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Marquee />
+        <TrustSection />
         <HowItWorks />
         <Niches />
+        <ProjectsShowcase />
+        <Testimonials />
+        <Pricing />
         <CTABanner />
         <FAQ />
         <DemoSection />
-        <footer className="text-center py-9 px-6 text-muted text-[13px] border-t border-white/8">
-          © site local · Baia Mare
-        </footer>
+        <Footer />
       </div>
       <WhatsAppButton />
     </>

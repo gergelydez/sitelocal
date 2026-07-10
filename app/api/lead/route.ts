@@ -1,22 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import nodemailer from "nodemailer";
-
-// Necesare din Meta Events Manager > Setări > Conversions API
-const PIXEL_ID = process.env.META_PIXEL_ID;
-const CAPI_TOKEN = process.env.META_CAPI_ACCESS_TOKEN;
+import { sendCapiEvent, extractClientMeta } from "@/app/lib/meta";
 
 // Necesare pentru notificarea prin email (vezi README)
 const GMAIL_USER = process.env.GMAIL_USER;
 const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD;
 const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL; // unde vrei să primești lead-urile
-
-function sha256(value: string) {
-  return crypto
-    .createHash("sha256")
-    .update(value.trim().toLowerCase())
-    .digest("hex");
-}
 
 async function sendLeadEmail(data: {
   nume: string;
@@ -57,7 +47,7 @@ async function sendLeadEmail(data: {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { nume, firma, telefon, domeniu } = body;
+    const { nume, firma, telefon, domeniu, eventId } = body;
 
     if (!nume || !firma || !telefon || !domeniu) {
       return NextResponse.json(
@@ -76,43 +66,21 @@ export async function POST(req: NextRequest) {
       // nu oprim tot request-ul dacă emailul eșuează — lead-ul tot se salvează/loghează
     }
 
-    // 2. Trimite evenimentul Lead către Meta Conversions API (server-side)
-    //    Acesta e cel mai fiabil semnal pentru optimizarea reclamelor —
-    //    nu depinde de ad-blockers sau Safari ITP, spre deosebire de Pixel-ul din browser.
-    if (PIXEL_ID && CAPI_TOKEN) {
-      const eventId = crypto.randomUUID();
-
-      const payload = {
-        data: [
-          {
-            event_name: "Lead",
-            event_time: Math.floor(Date.now() / 1000),
-            event_id: eventId, // trebuie să coincidă cu event_id-ul trimis din Pixel (client), ca Meta să dedupleze
-            action_source: "website",
-            user_data: {
-              ph: [sha256(telefon)], // telefonul trebuie hash-uit SHA256 înainte de trimitere
-            },
-            custom_data: {
-              content_name: domeniu,
-              company_name: firma,
-            },
-          },
-        ],
-      };
-
-      const capiRes = await fetch(
-        `https://graph.facebook.com/v19.0/${PIXEL_ID}/events?access_token=${CAPI_TOKEN}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        }
-      );
-
-      if (!capiRes.ok) {
-        console.error("Meta CAPI error:", await capiRes.text());
-      }
-    }
+    // 2. Trimite evenimentul Lead către Meta Conversions API (server-side).
+    //    Folosim același event_id ca Pixel-ul din browser, ca Meta să dedupleze
+    //    cele două semnale (nu să numere lead-ul de două ori), plus IP/user-agent/fbp/fbc
+    //    pentru o potrivire (match quality) cât mai clară în Events Manager.
+    const { ip, userAgent, fbp, fbc } = extractClientMeta(req);
+    await sendCapiEvent({
+      eventName: "Lead",
+      eventId: eventId || crypto.randomUUID(),
+      ip,
+      userAgent,
+      fbp,
+      fbc,
+      phone: telefon,
+      customData: { content_name: domeniu, company_name: firma },
+    });
 
     return NextResponse.json({ ok: true });
   } catch (err) {

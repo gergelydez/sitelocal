@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { trackEvent } from "../lib/pixel-client";
 
 const WHATSAPP_NUMBER = "40700000000";
 const MESSAGE = "Salut! Aș vrea să văd cum ar arăta site-ul afacerii mele.";
@@ -17,6 +18,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Scrie-mi pe WhatsApp"
+      onClick={() => trackEvent("Contact", { content_name: "whatsapp_float_button" })}
       className="fixed bottom-5 right-5 md:bottom-7 md:right-7 z-50 w-14 h-14 rounded-full bg-emerald flex items-center justify-center shadow-lg shadow-black/30 cursor-pointer"
     >
       <svg viewBox="0 0 32 32" width="26" height="26" fill="white" aria-hidden="true">

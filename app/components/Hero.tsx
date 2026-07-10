@@ -24,7 +24,7 @@ export default function Hero() {
           className="font-display font-bold text-[36px] md:text-[48px] leading-[1.12] mb-6 tracking-tight"
         >
           Afacerea ta din Maramureș merită un site care vinde.{" "}
-          <span className="grad-text">Vezi cum arată al tău GRATUIT, în 3 zile.</span>
+          <span className="grad-text">Vezi demo-ul GRATUIT în 24h.</span>
         </motion.h1>
 
         <motion.p
@@ -33,9 +33,10 @@ export default function Hero() {
           transition={{ duration: 0.65, delay: 0.16 }}
           className="text-[16.5px] md:text-[17.5px] text-muted max-w-[48ch] mb-8 leading-relaxed"
         >
-          Construiesc gratuit o schiță demo, adaptată 100% afacerii tale.
-          O vezi live, decizi dacă merită — și plătești un preț corect doar
-          dacă îți place. Zero risc, zero presiune.
+          Construiesc gratuit o schiță demo în 24 de ore, adaptată 100%
+          afacerii tale. O vezi live, decizi dacă merită — iar dacă îți
+          place, site-ul tău complet e gata în doar 3 zile. Zero risc, zero
+          presiune.
         </motion.p>
 
         <motion.div
@@ -45,9 +46,9 @@ export default function Hero() {
           className="flex gap-5 text-[13px] text-muted flex-wrap"
         >
           {[
-            "Gata în 3 zile",
+            "Demo gratuit în 24h",
+            "Site complet în 3 zile",
             "Plătești doar dacă îți place",
-            "Construit de un expert local",
           ].map((t) => (
             <span key={t} className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-trust" />
@@ -71,7 +72,7 @@ export default function Hero() {
           Solicită demo-ul gratuit
         </h2>
         <p className="text-muted text-[13.5px] mb-6 leading-relaxed">
-          Completezi acum, primești schița site-ului tău în 3 zile.
+          Completezi acum, primești demo-ul live al site-ului tău în 24h.
         </p>
         <LeadForm />
       </motion.div>

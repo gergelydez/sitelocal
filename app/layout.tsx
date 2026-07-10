@@ -20,7 +20,10 @@ export const metadata: Metadata = {
     "Vezi gratuit cum arată site-ul afacerii tale, construit în 3 zile de un expert local. Plătești doar dacă îți place demo-ul.",
 };
 
-const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+// Fallback hardcodat: Pixel ID e o valoare publică (apare oricum în HTML-ul livrat
+// către browser), deci nu e nevoie de secret pentru el — dar poate fi suprascris
+// din variabilele de mediu dacă schimbați contul de Ads.
+const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "1983304235646415";
 
 export default function RootLayout({
   children,
