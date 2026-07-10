@@ -20,42 +20,19 @@ body {
 }
 
 .grad-text {
-  background: linear-gradient(100deg, #fff 20%, #D7263D 55%, #8A0F1A 80%);
+  background: linear-gradient(100deg, #fff 25%, #60A5FA 65%, #34D399 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .btn-shine {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-@keyframes rotate {
-  to {
-    --angle: 360deg;
-  }
-}
-.glow-ring {
-  background: conic-gradient(
-    from var(--angle, 0deg),
-    #8A0F1A,
-    #D7263D,
-    #F2F2F2,
-    #8A0F1A
-  );
-  animation: rotate 6s linear infinite;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 @keyframes marquee {
@@ -67,11 +44,11 @@ body {
   }
 }
 .marquee-track {
-  animation: marquee 28s linear infinite;
+  animation: marquee 32s linear infinite;
 }
 
 :focus-visible {
-  outline: 2px solid #D7263D;
+  outline: 2px solid #3B82F6;
   outline-offset: 2px;
   border-radius: 4px;
 }

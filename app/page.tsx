@@ -3,10 +3,11 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import HowItWorks from "./components/HowItWorks";
-import Differentiation from "./components/Differentiation";
+import Niches from "./components/Niches";
 import CTABanner from "./components/CTABanner";
 import FAQ from "./components/FAQ";
 import DemoSection from "./components/DemoSection";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
         <Hero />
         <Marquee />
         <HowItWorks />
-        <Differentiation />
+        <Niches />
         <CTABanner />
         <FAQ />
         <DemoSection />
@@ -25,6 +26,7 @@ export default function Home() {
           © site local · Baia Mare
         </footer>
       </div>
+      <WhatsAppButton />
     </>
   );
 }

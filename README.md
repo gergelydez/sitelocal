@@ -11,11 +11,12 @@ Design dark, glassmorphism, gradient (violet/cyan/roz), animat cu Framer Motion 
 - `app/components/Navbar.tsx` — navbar glass, sticky
 - `app/components/Hero.tsx` — hero + elementul semnătură (cardul browser cu inel gradient rotativ + morph 404→site)
 - `app/components/Marquee.tsx` — bandă cu tipuri de afaceri, scroll infinit
-- `app/components/HowItWorks.tsx` — 3 pași, bento cards cu stagger
-- `app/components/Differentiation.tsx` — comparație cu alte opțiuni + statistici cu contor animat
+- `app/components/HowItWorks.tsx` — cei 3 pași zero-risc
+- `app/components/Niches.tsx` — nișele pe care le validăm (auto, horeca, saloane/clinici, meseriași)
 - `app/components/CTABanner.tsx` — banner CTA intermediar
 - `app/components/FAQ.tsx` — accordion animat (height + fade)
 - `app/components/DemoSection.tsx` + `LeadForm.tsx` — formularul, trimite datele + evenimentul Pixel din browser
+- `app/components/WhatsAppButton.tsx` — buton flotant WhatsApp, colț dreapta-jos
 - `app/components/Reveal.tsx` — wrapper-e reutilizabile pentru animații scroll-triggered
 - `app/api/lead/route.ts` — ruta server care primește lead-ul și-l trimite către Meta Conversions API
 - `app/layout.tsx` — include scriptul de Meta Pixel
@@ -73,4 +74,6 @@ Gata. La fiecare completare de formular primești un email cu numele, firma, tel
 
 ## Numărul de WhatsApp
 
-În `app/components/LeadForm.tsx`, caută `wa.me/40700000000` și înlocuiește cu numărul tău real (format internațional, fără +).
+Numărul apare în trei locuri — caută `40700000000` și înlocuiește-l cu numărul tău real (format internațional, fără +):
+- `app/components/WhatsAppButton.tsx` (butonul flotant)
+- `app/components/LeadForm.tsx` (mesajul de succes după trimiterea formularului)

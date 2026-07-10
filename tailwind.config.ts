@@ -5,18 +5,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0A0A0A",
-        bg2: "#111111",
-        surface: "#141414",
+        bg: "#09090B",
+        bg2: "#0F0F12",
+        surface: "#131316",
         text: "#FAFAFA",
-        muted: "#8F8F8F",
-        violet: "#8A0F1A",
-        cyan: "#D7263D",
-        pink: "#F2F2F2",
-        glassBorder: "rgba(255,255,255,0.12)",
+        muted: "#9B9BA3",
+        trust: "#3B82F6",
+        emerald: "#10B981",
+        glassBorder: "rgba(255,255,255,0.10)",
       },
       fontFamily: {
-        display: ["var(--font-space-grotesk)", "sans-serif"],
+        display: ["var(--font-jakarta)", "sans-serif"],
         body: ["var(--font-inter)", "sans-serif"],
       },
       backdropBlur: {
