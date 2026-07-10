@@ -30,6 +30,7 @@ export async function sendCapiEvent({
   fbp,
   fbc,
   phone,
+  email,
   customData,
 }: {
   eventName: string;
@@ -39,6 +40,7 @@ export async function sendCapiEvent({
   fbp?: string | null;
   fbc?: string | null;
   phone?: string;
+  email?: string;
   customData?: Record<string, unknown>;
 }) {
   if (!CAPI_TOKEN) {
@@ -54,6 +56,7 @@ export async function sendCapiEvent({
   if (fbp) userData.fbp = fbp;
   if (fbc) userData.fbc = fbc;
   if (phone) userData.ph = [sha256(phone)];
+  if (email) userData.em = [sha256(email)];
 
   const payload = {
     data: [

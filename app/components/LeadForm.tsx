@@ -32,6 +32,7 @@ export default function LeadForm() {
       nume: (form.elements.namedItem("nume") as HTMLInputElement).value,
       firma: (form.elements.namedItem("firma") as HTMLInputElement).value,
       telefon: (form.elements.namedItem("telefon") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
       domeniu: (form.elements.namedItem("domeniu") as HTMLSelectElement).value,
     };
 
@@ -48,6 +49,9 @@ export default function LeadForm() {
       if (!res.ok) throw new Error("Request failed");
 
       if (typeof window !== "undefined" && window.fbq) {
+        // Nu trimitem email-ul aici ca parametru custom — Meta îl preia automat
+        // din câmpul <input type="email"> prin Automatic Advanced Matching
+        // (același mecanism care deja potrivea telefonul, fără cod suplimentar).
         window.fbq(
           "track",
           "Lead",
@@ -104,6 +108,7 @@ export default function LeadForm() {
             placeholder="07xx xxx xxx"
             type="tel"
           />
+          <Field id="email" label="Email" placeholder="ion@firma.ro" type="email" />
 
           <div className="mb-4">
             <label htmlFor="domeniu" className="block text-xs font-semibold mb-1.5 text-muted">

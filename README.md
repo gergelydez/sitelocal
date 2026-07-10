@@ -26,6 +26,9 @@ Design dark, glassmorphism, gradient (violet/cyan/roz), animat cu Framer Motion 
 - `app/formular/` — pagină separată, doar cu formularul (pentru trafic din reclame); trimite evenimentul `ViewContent` și lasă vizitatorul să exploreze restul site-ului dintr-un link
 - `app/lib/meta.ts` — helper comun pentru trimiterea evenimentelor către Meta Conversions API
 - `app/lib/pixel-client.ts` — helper client-side pentru evenimente `Contact`/`ViewContent`, cu event_id comun
+- `app/lib/db.ts` — conexiune Postgres + salvare/citire lead-uri, pentru dashboard-ul din `/admin`
+- `app/admin/page.tsx` — dashboard cu toate lead-urile primite, protejat cu parolă
+- `middleware.ts` — protejează `/admin` cu autentificare HTTP Basic (user + parolă)
 
 ## De completat cu date reale
 
@@ -84,6 +87,21 @@ Prin email, automat, de fiecare dată când cineva completează formularul.
 Gata. La fiecare completare de formular primești un email cu numele, firma, telefonul (cu link direct spre WhatsApp) și domeniul de activitate.
 
 **Notă:** dacă lași aceste 3 variabile necompletate, site-ul tot funcționează — doar că lead-ul apare exclusiv în log-urile din Vercel (Deployments → View Function Logs), nu în email.
+
+## Dashboard de lead-uri (`/admin`)
+
+Pe lângă email, fiecare lead se salvează și într-o bază de date Postgres, vizibilă într-un tabel simplu la `tu-domeniul.ro/admin` (protejat cu user + parolă).
+
+**Pași de configurare:**
+
+1. În Vercel → proiectul tău → tab-ul **Storage** → **Create Database** → alege Postgres (Neon) → urmează pașii → **Connect** la proiect. Asta adaugă automat `POSTGRES_URL` (și variantele lui) în Environment Variables — nu trebuie completat manual.
+2. Tot în Environment Variables, adaugă:
+   - `ADMIN_PASSWORD` — parola ta pentru dashboard (obligatoriu; fără ea, `/admin` răspunde cu eroare 503, nu rămâne deschis din greșeală)
+   - `ADMIN_USER` — opțional, implicit `admin`
+3. Redeploy (Vercel o face automat după ce salvezi variabilele, sau declanșezi manual din Deployments)
+4. Deschide `tu-domeniul.ro/admin` — browserul cere user + parolă, apoi vezi toate lead-urile: dată, nume, firmă, telefon (link direct spre WhatsApp), email (link direct de scris), domeniu.
+
+**Notă:** tabelul din baza de date se creează automat la primul lead trimis după ce ai conectat baza de date — nu e nevoie de nicio migrare manuală. Lead-urile trimise înainte de configurare nu apar retroactiv (dar tot ajung prin email, dacă ai configurat pasul de mai sus).
 
 ## Deploy pe Vercel
 
