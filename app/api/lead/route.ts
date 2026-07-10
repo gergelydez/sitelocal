@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import nodemailer from "nodemailer";
 import { sendCapiEvent, extractClientMeta } from "@/app/lib/meta";
-import { saveLead } from "@/app/lib/db";
+import { saveLead, saveEvent } from "@/app/lib/db";
 
 // Necesare pentru notificarea prin email (vezi README)
 const GMAIL_USER = process.env.GMAIL_USER;
@@ -51,7 +51,7 @@ async function sendLeadEmail(data: {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { nume, firma, telefon, email, domeniu, eventId } = body;
+    const { nume, firma, telefon, email, domeniu, eventId, attribution } = body;
 
     if (!nume || !firma || !telefon || !email || !domeniu) {
       return NextResponse.json(
@@ -68,6 +68,21 @@ export async function POST(req: NextRequest) {
     } catch (dbErr) {
       console.error("Eroare salvare lead în baza de date:", dbErr);
       // nu oprim request-ul dacă baza de date nu e încă conectată — email + CAPI tot funcționează
+    }
+
+    // 1b. Salvează și ca eveniment în tabelul de analytics, cu sursa de trafic
+    try {
+      await saveEvent({
+        eventName: "Lead",
+        path: "/",
+        referrer: attribution?.referrer,
+        utmSource: attribution?.utmSource,
+        utmMedium: attribution?.utmMedium,
+        utmCampaign: attribution?.utmCampaign,
+        source: attribution?.source,
+      });
+    } catch (dbErr) {
+      console.error("Eroare salvare eveniment analytics:", dbErr);
     }
 
     // 2. Trimite email de notificare — aici primești lead-ul, practic
