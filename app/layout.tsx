@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-space-grotesk",
-  weight: ["500", "600", "700"],
+  variable: "--font-jakarta",
+  weight: ["500", "600", "700", "800"],
 });
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Site Local — Demo gratuit pentru afacerea ta din Baia Mare",
+  title: "Site Local — Demo gratuit în 3 zile pentru afacerea ta din Maramureș",
   description:
-    "Primești gratuit prima variantă a site-ului tău în 24 de ore. Fără obligații, fără plată în avans.",
+    "Vezi gratuit cum arată site-ul afacerii tale, construit în 3 zile de un expert local. Plătești doar dacă îți place demo-ul.",
 };
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
@@ -49,7 +49,7 @@ export default function RootLayout({
         )}
       </head>
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} font-body bg-bg text-text antialiased`}
+        className={`${jakarta.variable} ${inter.variable} font-body bg-bg text-text antialiased`}
       >
         {PIXEL_ID && (
           <noscript>

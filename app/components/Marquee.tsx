@@ -1,9 +1,8 @@
 const ITEMS = [
-  "Restaurant · Cafenea",
-  "Salon · Beauty",
-  "Service auto",
-  "Cabinet medical",
-  "Avocatură",
+  "Service auto · Detailing",
+  "Pensiuni · Restaurante",
+  "Saloane · Clinici",
+  "Meseriași · Construcții",
   "Comerț local",
 ];
 

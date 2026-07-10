@@ -30,10 +30,10 @@ export default function FAQ() {
   return (
     <section className="max-w-[760px] mx-auto px-6 py-20 md:py-24">
       <Reveal className="mb-10">
-        <div className="text-cyan text-[12.5px] font-bold uppercase tracking-wider mb-3">
+        <div className="text-trust text-[12.5px] font-semibold uppercase tracking-wider mb-3">
           Întrebări frecvente
         </div>
-        <h2 className="font-display font-bold text-[28px] md:text-[32px]">
+        <h2 className="font-display font-bold text-[28px] md:text-[32px] tracking-tight">
           Ce te-ar putea reține
         </h2>
       </Reveal>
@@ -43,7 +43,7 @@ export default function FAQ() {
           const isOpen = open === i;
           return (
             <Reveal key={item.q} delay={i * 0.05}>
-              <div className="glass rounded-2xl overflow-hidden">
+              <div className="bg-surface border border-white/8 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
@@ -53,7 +53,7 @@ export default function FAQ() {
                   <motion.span
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.25 }}
-                    className="shrink-0 text-cyan"
+                    className="shrink-0 text-trust"
                   >
                     <Plus size={18} />
                   </motion.span>

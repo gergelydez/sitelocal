@@ -11,10 +11,10 @@ declare global {
 }
 
 const DOMENII = [
-  "Restaurant / Cafenea",
-  "Salon / Beauty",
-  "Service auto",
-  "Cabinet medical / Avocatură",
+  "Auto (service / detailing)",
+  "Horeca (pensiune / restaurant)",
+  "Salon / Clinică",
+  "Meseriași / Construcții",
   "Altceva",
 ];
 
@@ -57,25 +57,25 @@ export default function LeadForm() {
       {status === "done" ? (
         <motion.div
           key="done"
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           className="text-center py-4"
         >
           <div className="flex justify-center mb-4">
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-violet to-cyan flex items-center justify-center">
-              <CheckCircle2 size={28} className="text-bg" />
+            <div className="w-12 h-12 rounded-full bg-emerald/15 border border-emerald/30 flex items-center justify-center">
+              <CheckCircle2 size={22} className="text-emerald" />
             </div>
           </div>
-          <h2 className="font-display font-bold text-[24px] mb-2">
+          <h3 className="font-display font-bold text-[20px] mb-2">
             Perfect, ai intrat!
-          </h2>
+          </h3>
           <p className="text-muted text-sm mb-5">
-            În următoarele 24 de ore primești gratuit prima versiune a
-            site-ului tău.
+            În maximum 3 zile primești gratuit prima schiță a site-ului tău,
+            live.
           </p>
           <a
             href="https://wa.me/40700000000"
-            className="inline-block font-bold text-[14px] grad-text"
+            className="inline-block font-semibold text-[14px] text-trust hover:text-trust/80 transition-colors"
           >
             Sau scrie-mi acum direct pe WhatsApp →
           </a>
@@ -104,36 +104,33 @@ export default function LeadForm() {
               id="domeniu"
               name="domeniu"
               required
-              className="w-full px-4 py-3.5 rounded-xl bg-white/[0.04] border border-white/12 text-[14.5px] focus:border-cyan outline-none"
+              className="w-full px-4 py-3.5 rounded-lg bg-white/[0.03] border border-white/12 text-[14.5px] focus:border-trust outline-none appearance-none"
             >
-              <option value="" className="bg-[#0E131D]">Alege...</option>
+              <option value="" className="bg-[#131316]">Alege...</option>
               {DOMENII.map((d) => (
-                <option key={d} className="bg-[#0E131D]">{d}</option>
+                <option key={d} className="bg-[#131316]">{d}</option>
               ))}
             </select>
           </div>
 
           <motion.button
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.98 }}
             type="submit"
             disabled={status === "loading"}
-            className="btn-shine w-full text-white font-bold py-4 rounded-2xl transition-opacity disabled:opacity-60 cursor-pointer shadow-[0_0_30px_rgba(138,15,26,0.3)]"
-            style={{
-              backgroundImage: "linear-gradient(100deg,#3730A3,#2563EB,#0D9488)",
-            }}
+            className="btn-shine w-full text-white font-semibold text-[15px] py-4 rounded-lg bg-trust hover:bg-trust/90 transition-opacity disabled:opacity-60 cursor-pointer"
           >
-            {status === "loading" ? "Se trimite..." : "Vreau demo-ul gratuit →"}
+            {status === "loading" ? "Se trimite..." : "Solicită Demo Gratuit Live"}
           </motion.button>
 
           {status === "error" && (
-            <p className="text-cyan text-xs text-center mt-2">
+            <p className="text-red-400 text-xs text-center mt-2">
               Ceva n-a mers. Încearcă din nou sau scrie-mi direct pe WhatsApp.
             </p>
           )}
 
           <p className="text-center text-xs text-muted mt-4">
-            Fără obligații. Nu-ți place? Nu plătești nimic.
+            Fără obligații. Nu-ți place demo-ul? Nu plătești nimic.
           </p>
         </motion.form>
       )}
@@ -163,7 +160,7 @@ function Field({
         type={type}
         required
         placeholder={placeholder}
-        className="w-full px-4 py-3.5 rounded-xl bg-white/[0.04] border border-white/12 text-[14.5px] placeholder:text-white/25 focus:border-cyan outline-none"
+        className="w-full px-4 py-3.5 rounded-lg bg-white/[0.03] border border-white/12 text-[14.5px] placeholder:text-white/25 focus:border-trust outline-none"
       />
     </div>
   );
