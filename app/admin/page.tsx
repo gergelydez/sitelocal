@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { listLeads } from "@/app/lib/db";
 
 export const metadata: Metadata = {
@@ -22,9 +23,17 @@ export default async function AdminPage() {
   return (
     <div className="min-h-screen bg-bg text-text px-6 py-10 md:py-14">
       <div className="max-w-[1000px] mx-auto">
-        <h1 className="font-display font-bold text-[24px] mb-1 tracking-tight">
-          Lead-uri primite
-        </h1>
+        <div className="flex items-center justify-between mb-1">
+          <h1 className="font-display font-bold text-[24px] tracking-tight">
+            Lead-uri primite
+          </h1>
+          <Link
+            href="/admin/analytics"
+            className="text-trust hover:text-trust/80 transition-colors text-[13.5px]"
+          >
+            Analytics →
+          </Link>
+        </div>
         <p className="text-muted text-[13.5px] mb-8">
           Ultimele {leads.length} din formularul de demo, cele mai noi primele.
         </p>

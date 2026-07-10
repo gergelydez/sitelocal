@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import { captureAttribution } from "../lib/attribution-client";
 
 declare global {
   interface Window {
@@ -39,12 +40,13 @@ export default function LeadForm() {
     // Un singur event_id, împărțit între Pixel-ul din browser și Conversions API
     // (server) — altfel Meta numără lead-ul de două ori.
     const eventId = crypto.randomUUID();
+    const attribution = captureAttribution();
 
     try {
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, eventId }),
+        body: JSON.stringify({ ...data, eventId, attribution }),
       });
       if (!res.ok) throw new Error("Request failed");
 

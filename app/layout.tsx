@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import Script from "next/script";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -66,6 +67,7 @@ export default function RootLayout({
             />
           </noscript>
         )}
+        <AnalyticsTracker />
         {children}
       </body>
     </html>

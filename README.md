@@ -26,9 +26,12 @@ Design dark, glassmorphism, gradient (violet/cyan/roz), animat cu Framer Motion 
 - `app/formular/` — pagină separată, doar cu formularul (pentru trafic din reclame); trimite evenimentul `ViewContent` și lasă vizitatorul să exploreze restul site-ului dintr-un link
 - `app/lib/meta.ts` — helper comun pentru trimiterea evenimentelor către Meta Conversions API
 - `app/lib/pixel-client.ts` — helper client-side pentru evenimente `Contact`/`ViewContent`, cu event_id comun
-- `app/lib/db.ts` — conexiune Postgres + salvare/citire lead-uri, pentru dashboard-ul din `/admin`
+- `app/lib/db.ts` — conexiune Postgres + salvare/citire lead-uri și evenimente, pentru dashboard-urile din `/admin`
 - `app/admin/page.tsx` — dashboard cu toate lead-urile primite, protejat cu parolă
-- `middleware.ts` — protejează `/admin` cu autentificare HTTP Basic (user + parolă)
+- `app/admin/analytics/page.tsx` — dashboard cu trafic (page views, contact, lead-uri) pe surse
+- `app/lib/attribution-client.ts` — capturează sursa de trafic (Facebook Ads, Google Ads, UTM, referrer) la prima vizită și o păstrează într-un cookie 30 de zile
+- `app/components/AnalyticsTracker.tsx` — loghează un PageView (cu sursa) la fiecare încărcare de pagină, exceptând `/admin`
+- `middleware.ts` — protejează `/admin` (inclusiv `/admin/analytics`) cu autentificare HTTP Basic (user + parolă)
 
 ## De completat cu date reale
 
@@ -102,6 +105,18 @@ Pe lângă email, fiecare lead se salvează și într-o bază de date Postgres, 
 4. Deschide `tu-domeniul.ro/admin` — browserul cere user + parolă, apoi vezi toate lead-urile: dată, nume, firmă, telefon (link direct spre WhatsApp), email (link direct de scris), domeniu.
 
 **Notă:** tabelul din baza de date se creează automat la primul lead trimis după ce ai conectat baza de date — nu e nevoie de nicio migrare manuală. Lead-urile trimise înainte de configurare nu apar retroactiv (dar tot ajung prin email, dacă ai configurat pasul de mai sus).
+
+## Analytics de trafic (`/admin/analytics`)
+
+Folosește aceeași bază de date Postgres — nu necesită configurare suplimentară față de dashboard-ul de lead-uri de mai sus. Arată:
+
+- **Page Views, Contact (click WhatsApp), ViewContent, Lead-uri** — totaluri, plus rata de conversie (lead-uri / page views)
+- **Trafic pe zi**, ultimele 30 de zile
+- **Pe surse de trafic** — un tabel cu fiecare sursă (Facebook/Instagram Ads, Google Ads, Direct, sau orice `utm_source` folosit în linkurile tale) și câte page views/contact/lead-uri a produs, cu rata de conversie proprie
+
+**Cum se determină sursa:** la prima vizită dintr-o sesiune, se citește `utm_source` din URL (dacă ai adăugat unul manual la linkuri), altfel `fbclid`/`gclid` (adăugate automat de Facebook/Google la click pe reclamă), altfel domeniul din care a venit vizitatorul (referrer). Sursa se salvează într-un cookie de 30 de zile, deci dacă cineva navighează mai multe pagini înainte să completeze formularul, lead-ul tot e atribuit corect sursei inițiale — nu ultimei pagini vizitate.
+
+**Notă:** vizitele tale proprii pe `/admin` nu sunt logate, ca să nu umple statisticile cu zgomot.
 
 ## Deploy pe Vercel
 
