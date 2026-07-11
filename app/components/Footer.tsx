@@ -1,6 +1,7 @@
 const LINKS = [
   { href: "#cum-functioneaza", label: "Cum funcționează" },
   { href: "#nise", label: "Nișe" },
+  { href: "#proiecte", label: "Portofoliu" },
   { href: "#preturi", label: "Prețuri" },
   { href: "#recenzii", label: "Recenzii" },
   { href: "#faq", label: "Întrebări frecvente" },

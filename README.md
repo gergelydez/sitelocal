@@ -35,9 +35,9 @@ Design dark, glassmorphism, gradient (violet/cyan/roz), animat cu Framer Motion 
 
 ## De completat cu date reale
 
-- **Prețuri** (`app/components/Pricing.tsx`): "Site prezentare" e la 799 lei (valoarea ta). Prețul de "Site + mentenanță" (799 lei + 99 lei/lună) e o sugestie a mea, nu o cifră pe care mi-ai confirmat-o — ajustează-l dacă vrei altă sumă pentru mentenanța lunară.
+- **Prețuri** (`app/components/Pricing.tsx`): 3 pachete reale — Startup (699 lei), Professional (1.199 lei, evidențiat), E-commerce/Premium (2.199 lei).
+- **Portofoliu** (`app/components/ProjectsShowcase.tsx`): 5 proiecte reale, cu link direct (deschis în tab nou) — Flo Detailing Auto, Create Beauty Salon, Dentist Site, Magic Gym, Karma Fitness.
 - **Recenzii** (`app/components/Testimonials.tsx`): array-ul `REVIEWS` e gol intenționat — nu am inventat citate sau nume de clienți (recenziile false sunt ilegale în UE și riscă suspendarea contului de Meta Ads). Adaugă recenzii reale în array pe măsură ce le primești; secțiunea devine automat un carusel.
-- **Proiecte** (`app/components/ProjectsShowcase.tsx`): sunt concepte vizuale ilustrative, nu capturi de la site-uri reale. Dacă ai site-uri anterioare pe care vrei să le arăți, trimite-mi linkurile/capturile și le integrez ca portofoliu real.
 
 ## Meta Pixel — evenimente trackuite
 
