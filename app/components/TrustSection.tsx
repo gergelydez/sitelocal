@@ -1,6 +1,6 @@
 "use client";
 
-import { ShieldCheck, MapPin, Banknote, MessageCircle } from "lucide-react";
+import { ShieldCheck, MapPin, Banknote, MessageCircle, KeyRound, Wrench } from "lucide-react";
 import { Reveal, StaggerGroup, StaggerItem } from "./Reveal";
 import TiltCard from "./TiltCard";
 
@@ -25,12 +25,22 @@ const REASONS = [
     title: "Suport direct, pe WhatsApp",
     text: "Îmi scrii direct mie, nu unui ticket de suport care așteaptă zile la rând.",
   },
+  {
+    icon: KeyRound,
+    title: "Site-ul și domeniul sunt ale tale",
+    text: "Totul e pe numele tău. Dacă vrei vreodată să pleci, iei site-ul și domeniul cu tine, fără condiții.",
+  },
+  {
+    icon: Wrench,
+    title: "30 de zile de modificări incluse",
+    text: "După lansare, îți fac ajustările de care ai nevoie timp de 30 de zile, fără cost în plus.",
+  },
 ];
 
 export default function TrustSection() {
   return (
     <section className="max-w-[1120px] mx-auto px-6 py-16 md:py-20">
-      <StaggerGroup className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <StaggerGroup className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
         {REASONS.map((r) => (
           <StaggerItem key={r.title}>
             <TiltCard className="glass rounded-2xl p-6 h-full">

@@ -23,6 +23,14 @@ const FAQS = [
     a: "În 48 de ore de la momentul în care confirmi că mergem mai departe, pentru un site de prezentare. Pachetele mai mari durează puțin mai mult (vezi prețurile).",
   },
   {
+    q: "Al cui e site-ul după ce îl plătesc?",
+    a: "Al tău. Site-ul și domeniul sunt pe numele tău. Dacă vrei vreodată să lucrezi cu altcineva, le iei cu tine, fără condiții și fără taxe de „eliberare”.",
+  },
+  {
+    q: "Și dacă vreau modificări după lansare?",
+    a: "Primele 30 de zile după lansare sunt incluse: schimbi texte, poze, prețuri sau secțiuni și le fac fără cost în plus.",
+  },
+  {
     q: "Mă ocup și de găzduire și domeniu?",
     a: "Da, te ghidez pas cu pas sau mă ocup direct, în funcție de ce preferi. Explic clar costurile, fără taxe ascunse.",
   },

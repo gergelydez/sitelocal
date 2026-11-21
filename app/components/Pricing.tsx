@@ -110,13 +110,22 @@ export default function Pricing() {
       </StaggerGroup>
 
       <Reveal>
-        <div className="glass rounded-xl px-6 py-5 flex items-center justify-center gap-3 max-w-[640px] mx-auto text-center">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald shrink-0" />
-          <p className="text-[13.5px] text-muted">
-            <span className="text-text font-semibold">Zero risc:</span>{" "}
-            plătești doar dacă îți place schița primită în 24 de ore. Fără
-            obligații.
-          </p>
+        <div className="glass rounded-2xl px-6 py-6 max-w-[760px] mx-auto">
+          <div className="text-center text-[12.5px] font-semibold text-emerald uppercase tracking-wider mb-4">
+            Inclus în orice pachet
+          </div>
+          <div className="grid sm:grid-cols-3 gap-4 text-center">
+            {[
+              ["Zero risc", "plătești doar dacă îți place demo-ul primit în 24 de ore"],
+              ["Totul pe numele tău", "site-ul și domeniul rămân ale tale, oricând"],
+              ["30 de zile de modificări", "ajustări gratuite după lansare"],
+            ].map(([t, d]) => (
+              <div key={t}>
+                <div className="text-text font-semibold text-[14.5px] mb-1">{t}</div>
+                <p className="text-[13px] text-muted leading-relaxed">{d}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Reveal>
     </section>
