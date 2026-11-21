@@ -6,9 +6,9 @@ import { Reveal, StaggerGroup, StaggerItem } from "./Reveal";
 const TIERS = [
   {
     name: "Startup",
-    price: "699 lei",
+    price: "700 lei",
     highlight: false,
-    delivery: "Livrare în 3 zile (Demo în 24h)",
+    delivery: "Livrare în 48 de ore (Demo în 24h)",
     features: [
       "Design modern, 100% optimizat mobil",
       "Structură eficientă One-Page (Landing Page)",
@@ -26,7 +26,7 @@ const TIERS = [
     features: [
       "Tot din pachetul Startup",
       "Până la 5 pagini separate (Acasă, Despre Noi, Servicii, Portofoliu, Contact)",
-      "Optimizare SEO locală de bază pentru Baia Mare / Maramureș",
+      "Optimizare SEO locală de bază pentru orașul tău",
       "Sistem de programări online sau meniu digital interactiv",
       "Instalare și configurare Meta Pixel + Conversions API (gata de reclame)",
     ],

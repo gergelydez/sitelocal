@@ -3,7 +3,6 @@ const LINKS = [
   { href: "#nise", label: "Nișe" },
   { href: "#proiecte", label: "Portofoliu" },
   { href: "#preturi", label: "Prețuri" },
-  { href: "#recenzii", label: "Recenzii" },
   { href: "#faq", label: "Întrebări frecvente" },
   { href: "#demo", label: "Demo gratuit" },
 ];
@@ -17,7 +16,7 @@ export default function Footer() {
             site<span className="text-trust">local</span>.ro
           </div>
           <p className="text-muted text-[13.5px] leading-relaxed max-w-[38ch]">
-            Site-uri construite pentru afaceri din Baia Mare și Maramureș.
+            Site-uri pentru afaceri locale din toată România.
             Vezi demo-ul gratuit înainte să plătești orice.
           </p>
         </div>
@@ -34,7 +33,7 @@ export default function Footer() {
         </nav>
       </div>
       <div className="text-center py-6 px-6 text-muted text-[13px] border-t border-white/8">
-        © site local · Baia Mare
+        © sitelocal.ro
       </div>
     </footer>
   );

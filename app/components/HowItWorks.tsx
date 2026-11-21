@@ -17,7 +17,7 @@ const STEPS = [
   {
     num: "03",
     title: "Decizi tu, fără risc",
-    text: "Îți place demo-ul? Site-ul complet e gata în 3 zile. Nu-ți place? Rămâi cu ideile și nu plătești nimic.",
+    text: "Îți place demo-ul? Site-ul complet e gata în 48 de ore. Nu-ți place? Rămâi cu ideile și nu plătești nimic.",
   },
 ];
 
@@ -29,7 +29,7 @@ export default function HowItWorks() {
           Zero risc
         </div>
         <h2 className="font-display font-bold text-[28px] md:text-[34px] max-w-[24ch] mb-12 tracking-tight">
-          Demo în 24h, site complet în 3 zile — fără să plătești în avans
+          Demo în 24h, site complet în 48h — fără să plătești în avans
         </h2>
       </Reveal>
 

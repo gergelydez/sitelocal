@@ -34,7 +34,7 @@ async function sendLeadEmail(data: {
   await transporter.sendMail({
     from: `"Site Local — Lead nou" <${GMAIL_USER}>`,
     to: NOTIFY_EMAIL,
-    replyTo: data.email,
+    ...(data.email ? { replyTo: data.email } : {}),
     subject: `Lead nou: ${data.firma} (${data.domeniu})`,
     text: `Nume: ${data.nume}\nFirmă: ${data.firma}\nTelefon: ${data.telefon}\nEmail: ${data.email}\nDomeniu: ${data.domeniu}`,
     html: `
@@ -51,9 +51,12 @@ async function sendLeadEmail(data: {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { nume, firma, telefon, email, domeniu, eventId, attribution } = body;
+    const { firma, telefon, domeniu, eventId, attribution } = body;
+    // Nume și email sunt opționale în formular (formular scurt = mai multe lead-uri)
+    const nume: string = body.nume || "-";
+    const email: string = body.email || "";
 
-    if (!nume || !firma || !telefon || !email || !domeniu) {
+    if (!firma || !telefon || !domeniu) {
       return NextResponse.json(
         { error: "Câmpuri lipsă" },
         { status: 400 }

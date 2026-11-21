@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=390"><title>Zâmbet Dental Studio — Iași</title>
+<style>
+html,body{background:#f4f7f5}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;font-family:'DM Sans',sans-serif;color:#0e2a26;overflow-x:hidden}
+:root{--acc:#0f8f7e;--e:cubic-bezier(.22,1,.36,1)}
+.in{opacity:0;transform:translateY(24px);filter:blur(8px);animation:in .9s var(--e) forwards}
+@keyframes in{to{opacity:1;transform:none;filter:none}}
+.wrap{padding:14px}
+.hero{position:relative;border-radius:34px;overflow:hidden;height:660px;background:#dfeee9}
+.mesh{position:absolute;inset:-30%;background:conic-gradient(from 0deg at 50% 50%,#dff3ec,#bfe6db,#e9f4f0,#cdebe2,#dff3ec);animation:spin 16s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.arc{position:absolute;left:50%;top:150px;width:520px;height:520px;margin-left:-260px;border-radius:50%;border:1px solid rgba(15,143,126,.25)}
+.arc.b{width:380px;height:380px;margin-left:-190px;top:220px;border-color:rgba(15,143,126,.35)}
+.arc.c{width:240px;height:240px;margin-left:-120px;top:290px;border-color:rgba(15,143,126,.5);animation:breath 4s ease-in-out infinite}
+@keyframes breath{50%{transform:scale(1.08)}}
+.tooth{position:absolute;left:50%;top:330px;margin-left:-60px;width:120px;animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.glass{background:rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);box-shadow:0 4px 14px rgba(14,42,38,.08)}
+nav{position:relative;display:flex;justify-content:space-between;align-items:center;margin:14px;padding:10px 10px 10px 18px;border-radius:99px}
+.mark{font-weight:700;font-size:16px;letter-spacing:-.3px}.mark i{font-family:'Crimson Text',serif;font-weight:600;font-style:italic;font-size:19px;color:var(--acc)}
+.nb{background:#0e2a26;color:#fff;font-size:13px;font-weight:600;padding:9px 15px;border-radius:99px}
+.copy{position:relative;padding:20px 24px 0}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:99px;font-size:12.5px;font-weight:600}
+.chip b{background:var(--acc);color:#fff;border-radius:99px;padding:4px 9px;font-size:11px}
+h1{font-size:46px;line-height:.98;letter-spacing:-2px;font-weight:500;margin:16px 0 12px}
+h1 em{font-family:'Crimson Text',serif;font-style:italic;font-weight:600;color:var(--acc);letter-spacing:-1px}
+.copy p{font-size:15.5px;line-height:1.5;color:rgba(14,42,38,.7);max-width:300px}
+.float{position:absolute;bottom:20px;left:16px;right:16px;border-radius:24px;padding:14px;display:flex;align-items:center;gap:12px}
+.av{display:flex}.av span{width:34px;height:34px;border-radius:50%;border:2px solid #fff;margin-left:-10px;background:linear-gradient(135deg,#9fd8c9,#0f8f7e)}.av span:first-child{margin-left:0;background:linear-gradient(135deg,#f3d9c9,#d8a07f)}.av span:nth-child(2){background:linear-gradient(135deg,#d7e3f4,#8aa6cf)}
+.float div{font-size:13px;line-height:1.3}.float b{display:block;font-size:14px}
+.go{margin-left:auto;width:44px;height:44px;border-radius:50%;background:#0e2a26;display:flex;align-items:center;justify-content:center;flex:0 0 44px}
+section{padding:40px 22px}
+.lab{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:rgba(14,42,38,.5);margin-bottom:12px}
+h2{font-size:34px;font-weight:500;letter-spacing:-1.2px;line-height:1;margin-bottom:22px}h2 em{font-family:'Crimson Text',serif;font-style:italic;color:var(--acc)}
+.rv{animation:in linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+.card{border-radius:26px;padding:22px;margin-bottom:12px;background:#fff;box-shadow:0 4px 14px rgba(14,42,38,.06);display:flex;justify-content:space-between;align-items:flex-end}
+.card b{font-size:19px;font-weight:600;display:block;margin-bottom:4px}.card span{font-size:13.5px;color:rgba(14,42,38,.6)}
+.card em{font-style:normal;font-weight:600;color:var(--acc);white-space:nowrap}
+.card.dark{background:#0e2a26;color:#fff}.card.dark span{color:rgba(255,255,255,.65)}.card.dark em{color:#7fe0cc}
+.steps{display:flex;flex-direction:column;gap:10px}
+.step{display:flex;gap:14px;align-items:center;padding:16px;border-radius:20px;background:#e7f1ed}
+.step i{flex:0 0 38px;height:38px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700;color:var(--acc)}
+.book{margin:0 14px 30px;border-radius:34px;padding:34px 24px;background:#0e2a26;color:#fff}
+.book h2{color:#fff}.slots{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.slots span{padding:10px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.2);font-weight:600;font-size:14px}.slots .on{background:#7fe0cc;color:#0e2a26;border-color:#7fe0cc}
+.bw{display:inline-block;background:#fff;color:#0e2a26;font-weight:600;padding:14px 24px;border-radius:99px}
+footer{text-align:center;font-size:12px;color:rgba(14,42,38,.45);padding:0 0 40px}
+</style><link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></head><body>
+<div class="wrap"><header class="hero">
+<div class="mesh"></div><div class="arc"></div><div class="arc b"></div><div class="arc c"></div>
+<div class="in" style="animation-delay:.7s;position:absolute;inset:0"><svg class="tooth" viewBox="0 0 100 110" aria-hidden="true"><path d="M50 14c-10-9-36-12-40 12-3 17 5 26 8 44 3 20 9 32 16 32 8 0 7-24 16-24s8 24 16 24c7 0 13-12 16-32 3-18 11-27 8-44C86 2 60 5 50 14z" fill="#fff" stroke="#0f8f7e" stroke-width="2.5"/><path d="M30 30c4-6 12-7 16-3" fill="none" stroke="#0f8f7e" stroke-width="2.5" stroke-linecap="round" opacity=".5"/></svg></div>
+<nav class="glass in" style="animation-delay:.05s"><div class="mark">Zâmbet <i>dental</i></div><div class="nb">Programare</div></nav>
+<div class="copy"><div class="chip glass in" style="animation-delay:.2s"><b>Nou</b>Consultație + plan gratuit</div>
+<h1 class="in" style="animation-delay:.35s">Zâmbești din nou. <em>Fără frică.</em></h1>
+<p class="in" style="animation-delay:.5s">Stomatologie modernă în Iași, cu prețuri afișate și tratamente fără durere.</p></div>
+<div class="float glass in" style="animation-delay:.75s"><div class="av"><span></span><span></span><span></span></div><div><b>Locuri libere mâine</b>9:30 · 12:00 · 16:30</div><div class="go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></div>
+</header></div>
+<section><div class="lab rv">Tratamente</div><h2 class="rv">Prețuri <em>clare</em>, de la început</h2>
+<div class="card dark rv"><div><b>Albire profesională</b><span>o ședință, rezultat imediat</span></div><em>890 lei</em></div>
+<div class="card rv"><div><b>Detartraj + periaj</b><span>igienizare completă</span></div><em>250 lei</em></div>
+<div class="card rv"><div><b>Implant dentar</b><span>garanție pe viață la implant</span></div><em>de la 2.900</em></div>
+<div class="card rv"><div><b>Aparat dentar invizibil</b><span>plan 3D gratuit</span></div><em>la consult</em></div></section>
+<section style="padding-top:0"><div class="lab rv">Cum funcționează</div><h2 class="rv">Trei pași <em>simpli</em></h2>
+<div class="steps"><div class="step rv"><i>1</i>Te programezi online, în 30 de secunde</div><div class="step rv"><i>2</i>Primești planul și prețul, fără obligații</div><div class="step rv"><i>3</i>Începem doar când ești pregătit</div></div></section>
+<div class="book rv"><div class="lab" style="color:rgba(255,255,255,.5)">Programare</div><h2>Alege <em style="color:#7fe0cc">ora</em></h2><div class="slots"><span>9:30</span><span class="on">12:00</span><span>16:30</span></div><a class="bw">Confirmă programarea</a></div>
+<footer>Zâmbet Dental Studio · Iași · exemplu de site</footer>
+</body></html>

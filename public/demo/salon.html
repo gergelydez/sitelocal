@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=390">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;font-family:'DM Sans','Fira Sans',sans-serif;color:#3b2a2f;background:#fdf8f6}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 20px}
+.logo{font-family:'Crimson Text',serif;font-size:24px;font-weight:600;letter-spacing:.3px}.logo i{color:#c0707f}
+.bk{background:#3b2a2f;color:#fff;font-size:13px;font-weight:700;padding:9px 14px;border-radius:99px}
+.hero{margin:0 16px;border-radius:26px;padding:40px 24px 34px;background:linear-gradient(150deg,#f4d6d6 0%,#e8b4bc 55%,#c0707f 100%);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-90px;bottom:-110px;background:rgba(255,255,255,.28)}
+.hero small{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#7a3442}
+h1{font-family:'Crimson Text',serif;font-size:42px;line-height:1.02;font-weight:600;margin:12px 0 14px;color:#2a1a1e}
+.hero p{font-size:16px;line-height:1.45;margin-bottom:24px;color:#4a2f35;position:relative}
+.btn{display:block;text-align:center;padding:16px;border-radius:16px;font-weight:700;font-size:17px;margin-bottom:12px;position:relative}
+.dark{background:#2a1a1e;color:#fff}.wa{background:#fff;color:#2a1a1e}
+section{padding:34px 22px}h2{font-family:'Crimson Text',serif;font-size:32px;font-weight:600;margin-bottom:4px}.sub{color:#8a6f75;font-size:15px;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{border-radius:18px;padding:18px 14px;min-height:130px;display:flex;flex-direction:column;justify-content:flex-end}
+.t1{background:#f4d6d6}.t2{background:#efe3d3}.t3{background:#e5d4e8}.t4{background:#d9e6df}
+.tile b{font-size:16px}.tile span{font-size:13px;color:#6b5459;margin-top:3px}
+.row{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid #ecdcd8;font-size:16px}.row b{color:#a34d5d}
+.team{display:flex;gap:12px}.p{flex:1;background:#fff;border-radius:18px;padding:16px;text-align:center}
+.av{width:64px;height:64px;border-radius:50%;margin:0 auto 10px;background:linear-gradient(135deg,#e8b4bc,#c0707f)}.p b{display:block}.p span{font-size:13px;color:#8a6f75}
+.book{background:#2a1a1e;color:#fff;margin:0 16px 30px;border-radius:26px;padding:30px 22px}.book h2{color:#fff}.book .sub{color:#d9c3c7}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}.s{border:1px solid #6b5459;border-radius:12px;padding:10px 14px;font-weight:600}.s.on{background:#e8b4bc;color:#2a1a1e;border-color:#e8b4bc}
+footer{text-align:center;padding:10px 22px 40px;color:#8a6f75;font-size:13px}
+</style></head><body>
+<div class="nav"><div class="logo">Studio <i>Ana</i></div><div class="bk">Programare</div></div>
+<div class="hero"><small>Salon de înfrumusețare · Timișoara</small>
+<h1>Te simți frumoasă. Din prima vizită.</h1>
+<p>Coafură, manichiură, gene și tratamente faciale, într-un loc liniștit, aproape de centru.</p>
+<a class="btn dark">Fă-ți programare online</a><a class="btn wa">Scrie-ne pe WhatsApp</a></div>
+<section><h2>Servicii</h2><div class="sub">Alege ce ți se potrivește.</div>
+<div class="grid"><div class="tile t1"><b>Manichiură</b><span>semipermanentă, gel</span></div><div class="tile t2"><b>Coafură</b><span>tuns, vopsit, coc</span></div><div class="tile t3"><b>Extensii gene</b><span>1:1, volum</span></div><div class="tile t4"><b>Tratament facial</b><span>curățare, hidratare</span></div></div></section>
+<section style="padding-top:0"><h2>Prețuri</h2><div class="sub">Fără surprize la final.</div>
+<div class="row">Manichiură semipermanentă<b>120 lei</b></div><div class="row">Tuns + coafat<b>150 lei</b></div><div class="row">Extensii gene 1:1<b>220 lei</b></div><div class="row">Tratament facial<b>180 lei</b></div></section>
+<section style="padding-top:0"><h2>Echipa</h2><div class="sub">Oameni care știu ce fac.</div>
+<div class="team"><div class="p"><div class="av"></div><b>Ana</b><span>stilist</span></div><div class="p"><div class="av" style="background:linear-gradient(135deg,#efe3d3,#b08b6e)"></div><b>Ioana</b><span>nail artist</span></div></div></section>
+<div class="book"><h2>Programează-te</h2><div class="sub">Locuri libere mâine</div>
+<div class="slots"><div class="s">10:00</div><div class="s on">11:30</div><div class="s">13:00</div><div class="s">15:30</div><div class="s">17:00</div></div>
+<a class="btn" style="background:#e8b4bc;color:#2a1a1e">Confirmă ora 11:30</a></div>
+<footer>Studio Ana · Timișoara · exemplu de site</footer>
+</body></html>

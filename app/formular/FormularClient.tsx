@@ -39,14 +39,14 @@ export default function FormularClient() {
             <div className="text-center mb-7">
               <div className="glass inline-flex items-center gap-2 text-[12.5px] font-medium text-muted px-3.5 py-1.5 rounded-full mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald" />
-                Doar în Baia Mare și Maramureș
+                Pentru afaceri locale din toată România
               </div>
               <h1 className="font-display font-bold text-[28px] md:text-[32px] leading-[1.15] mb-3 tracking-tight">
                 Vezi demo-ul GRATUIT al site-ului tău, în 24h
               </h1>
               <p className="text-muted text-[14.5px] leading-relaxed">
                 Completezi formularul, primești o schiță live în 24 de ore.
-                Îți place? Site-ul complet e gata în 3 zile. Nu-ți place? Nu
+                Îți place? Site-ul complet e gata în 48 de ore. Nu-ți place? Nu
                 plătești nimic.
               </p>
             </div>

@@ -12,8 +12,8 @@ const REASONS = [
   },
   {
     icon: MapPin,
-    title: "Expert local, nu agenție la distanță",
-    text: "Cunosc piața din Baia Mare și Maramureș, nu un brief trimis printr-un formular generic.",
+    title: "Lucrezi direct cu mine, nu cu o agenție",
+    text: "Vorbești direct cu omul care îți face site-ul, nu cu un call center sau un formular generic.",
   },
   {
     icon: Banknote,

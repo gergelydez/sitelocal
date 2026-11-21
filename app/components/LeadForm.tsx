@@ -86,7 +86,7 @@ export default function LeadForm() {
           </h3>
           <p className="text-muted text-sm mb-5">
             În maximum 24 de ore primești gratuit demo-ul live al site-ului
-            tău. Îți place? Site-ul complet e gata în doar 3 zile.
+            tău. Îți place? Site-ul complet e gata în 48 de ore.
           </p>
           <a
             href="https://wa.me/40758656192"
@@ -102,7 +102,7 @@ export default function LeadForm() {
           exit={{ opacity: 0 }}
           onSubmit={handleSubmit}
         >
-          <Field id="nume" label="Nume" placeholder="Ion Popescu" />
+          <Field id="nume" label="Nume (opțional)" placeholder="Ion Popescu" required={false} />
           <Field id="firma" label="Firmă" placeholder="Salon Ana Beauty" />
           <Field
             id="telefon"
@@ -110,7 +110,7 @@ export default function LeadForm() {
             placeholder="07xx xxx xxx"
             type="tel"
           />
-          <Field id="email" label="Email" placeholder="ion@firma.ro" type="email" />
+          <Field id="email" label="Email (opțional)" placeholder="ion@firma.ro" type="email" required={false} />
 
           <div className="mb-4">
             <label htmlFor="domeniu" className="block text-xs font-semibold mb-1.5 text-muted">
@@ -159,11 +159,13 @@ function Field({
   label,
   placeholder,
   type = "text",
+  required = true,
 }: {
   id: string;
   label: string;
   placeholder: string;
   type?: string;
+  required?: boolean;
 }) {
   return (
     <div className="mb-4">
@@ -174,7 +176,7 @@ function Field({
         id={id}
         name={id}
         type={type}
-        required
+        required={required}
         placeholder={placeholder}
         className="w-full px-4 py-3.5 rounded-lg bg-white/[0.03] border border-white/12 text-[14.5px] placeholder:text-white/25 focus:border-trust outline-none"
       />

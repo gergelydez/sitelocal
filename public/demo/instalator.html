@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=390">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;font-family:'DM Sans','Fira Sans',sans-serif;color:#0f172a;background:#fff}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:#0b2545;color:#fff}
+.logo{font-weight:800;font-size:18px;letter-spacing:-.3px}.logo span{color:#f59e0b}
+.burger{width:26px;height:18px;border-top:3px solid #fff;border-bottom:3px solid #fff;position:relative}.burger:after{content:"";position:absolute;left:0;right:0;top:4.5px;border-top:3px solid #fff}
+.hero{background:linear-gradient(160deg,#0b2545 0%,#13315c 60%,#1d4e89 100%);color:#fff;padding:34px 22px 40px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-60px;top:-40px;width:220px;height:220px;border-radius:50%;background:rgba(245,158,11,.18)}
+.badge{display:inline-block;background:#f59e0b;color:#0b2545;font-weight:700;font-size:12px;padding:6px 12px;border-radius:99px;margin-bottom:16px}
+h1{font-size:33px;line-height:1.08;font-weight:800;letter-spacing:-.8px;margin-bottom:14px}
+.hero p{font-size:16px;line-height:1.45;opacity:.88;margin-bottom:24px}
+.btn{display:block;text-align:center;padding:16px;border-radius:14px;font-weight:700;font-size:17px;margin-bottom:12px}
+.call{background:#f59e0b;color:#0b2545}.wa{background:#22c55e;color:#fff}
+.stats{display:flex;gap:10px;margin-top:20px}.stat{flex:1;background:rgba(255,255,255,.1);border-radius:12px;padding:12px 8px;text-align:center}
+.stat b{display:block;font-size:20px}.stat small{font-size:11px;opacity:.8}
+section{padding:34px 22px}h2{font-size:25px;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}.sub{color:#64748b;font-size:15px;margin-bottom:20px}
+.card{display:flex;gap:14px;align-items:center;background:#f1f5f9;border-radius:16px;padding:16px;margin-bottom:12px}
+.ic{flex:0 0 52px;height:52px;border-radius:14px;background:#0b2545;display:flex;align-items:center;justify-content:center}
+.ic svg{width:28px;height:28px;stroke:#f59e0b;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.card b{font-size:16px;display:block;margin-bottom:3px}.card span{font-size:13.5px;color:#475569}
+.price{background:#0b2545;color:#fff}.price .sub{color:#cbd5e1}
+.row{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:16px}.row b{color:#f59e0b}
+.zones{display:flex;flex-wrap:wrap;gap:8px}.z{background:#e2e8f0;border-radius:99px;padding:8px 14px;font-size:14px;font-weight:600}
+.sched{background:#fffbeb}.sched .row{border-color:#fde68a}.sched .row b{color:#b45309}
+footer{background:#0b2545;color:#fff;padding:30px 22px 40px;text-align:center}footer p{opacity:.75;font-size:13px;margin-top:10px}
+</style></head><body>
+<div class="nav"><div class="logo">Instalații <span>Popescu</span></div><div class="burger"></div></div>
+<div class="hero">
+<div class="badge">Instalator autorizat · Cluj-Napoca</div>
+<h1>Țeava spartă? Ajungem în 60 de minute.</h1>
+<p>Reparații, montaj centrale și obiecte sanitare. Intervenții non-stop, cu preț spus înainte.</p>
+<a class="btn call">📞  Sună acum: 0740 000 000</a>
+<a class="btn wa">Scrie-ne pe WhatsApp</a>
+<div class="stats"><div class="stat"><b>24/7</b><small>non-stop</small></div><div class="stat"><b>60 min</b><small>timp de sosire</small></div><div class="stat"><b>12 ani</b><small>experiență</small></div></div>
+</div>
+<section><h2>Servicii</h2><div class="sub">Tot ce ține de apă, gaz și încălzire.</div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2s6 7 6 12a6 6 0 0 1-12 0c0-5 6-12 6-12z"/></svg></div><div><b>Desfundări și scurgeri</b><span>Chiuvete, WC, canalizare</span></div></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M12 12v5"/></svg></div><div><b>Montaj centrale termice</b><span>Instalare, revizie, reparații</span></div></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 14h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3zM6 14V5a2 2 0 0 1 4 0"/></svg></div><div><b>Obiecte sanitare</b><span>Cadă, duș, baterii, boiler</span></div></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 7l3-3 3 3-3 3M17 4v9a4 4 0 0 1-4 4H4"/></svg></div><div><b>Țevi și racorduri</b><span>Înlocuire, avarii, pierderi</span></div></div>
+</section>
+<section class="price"><h2>Prețuri orientative</h2><div class="sub">Prețul final îl afli înainte să începem.</div>
+<div class="row">Deplasare în Cluj<b>de la 50 lei</b></div><div class="row">Desfundare chiuvetă<b>de la 120 lei</b></div><div class="row">Montaj baterie<b>de la 100 lei</b></div><div class="row">Revizie centrală<b>de la 200 lei</b></div>
+</section>
+<section><h2>Zone deservite</h2><div class="sub">Cluj-Napoca și împrejurimi.</div>
+<div class="zones"><div class="z">Mănăștur</div><div class="z">Gheorgheni</div><div class="z">Mărăști</div><div class="z">Florești</div><div class="z">Baciu</div><div class="z">Apahida</div><div class="z">Zorilor</div></div></section>
+<section class="sched"><h2>Program</h2><div class="sub">Urgențe: non-stop.</div>
+<div class="row">Luni – Vineri<b>08:00 – 20:00</b></div><div class="row">Sâmbătă<b>09:00 – 16:00</b></div><div class="row">Urgențe<b>24/7</b></div></section>
+<footer><div class="logo">Instalații <span>Popescu</span></div><a class="btn call" style="margin-top:18px">📞  Sună acum</a><p>Cluj-Napoca · exemplu de site</p></footer>
+</body></html>

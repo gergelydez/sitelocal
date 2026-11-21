@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=390"><title>Motorline Garage — Service auto Brașov</title>
+<style>
+html,body{background:#0a0a0a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:390px;font-family:'DM Sans',sans-serif;color:#f4f4f2;overflow-x:hidden}
+:root{--acc:#ff3b2f;--e:cubic-bezier(.16,1,.3,1)}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.08;z-index:50;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.in{opacity:0;transform:translateY(26px);filter:blur(8px);animation:in .9s var(--e) forwards}
+@keyframes in{to{opacity:1;transform:none;filter:none}}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;position:relative;z-index:3}
+.mark{font-weight:700;letter-spacing:-.4px;font-size:17px}.mark sup{font-size:9px;color:var(--acc)}
+.pill{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(255,255,255,.18);padding:8px 13px;border-radius:99px}
+.hero{position:relative;height:640px;overflow:hidden;padding:0 22px}
+.mega{position:absolute;left:-14px;top:92px;font-family:Anton,sans-serif;font-size:236px;line-height:.8;letter-spacing:-6px;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.09);white-space:nowrap;animation:drift 14s linear infinite}
+@keyframes drift{to{transform:translateX(-380px)}}
+.rpm{position:absolute;right:-120px;top:120px;width:380px;height:380px}
+.rpm circle{fill:none}.rpm .arc{stroke:var(--acc);stroke-width:5;stroke-linecap:round;stroke-dasharray:900;stroke-dashoffset:900;animation:rev 2.4s var(--e) .5s forwards}
+@keyframes rev{to{stroke-dashoffset:330}}
+.needle{transform-origin:190px 190px;transform:rotate(-130deg);animation:nd 2.4s var(--e) .5s forwards}
+@keyframes nd{to{transform:rotate(52deg)}}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:236px;display:flex;align-items:center;gap:10px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 0 rgba(255,59,47,.6);animation:pulse 1.6s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(255,59,47,0)}100%{box-shadow:0 0 0 0 rgba(255,59,47,0)}}
+h1{font-family:Anton,sans-serif;font-weight:400;font-size:62px;line-height:.92;letter-spacing:-1px;text-transform:uppercase;margin:14px 0 16px;position:relative}
+h1 span{color:var(--acc)}
+.sub{font-size:15.5px;line-height:1.55;color:rgba(255,255,255,.72);max-width:320px}
+.ctas{display:flex;gap:10px;margin-top:22px}
+.b1{flex:1;background:var(--acc);color:#fff;border-radius:99px;padding:15px 18px;font-weight:600;font-size:15px;display:flex;align-items:center;justify-content:space-between}
+.b1 i{width:30px;height:30px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.b2{border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:15px 18px;font-weight:600;font-size:15px}
+.marq{border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);overflow:hidden;white-space:nowrap;padding:16px 0}
+.marq div{display:inline-block;animation:mq 12s linear infinite;font-family:Anton,sans-serif;font-size:26px;text-transform:uppercase;letter-spacing:.5px}
+.marq b{color:var(--acc);margin:0 18px;font-weight:400}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:46px 22px}
+.lab{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:14px}
+h2{font-family:Anton,sans-serif;font-weight:400;font-size:44px;line-height:.95;text-transform:uppercase;margin-bottom:24px}
+.rv{animation:in linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+.svc{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:14px;padding:18px 0;border-top:1px solid rgba(255,255,255,.1)}
+.svc .n{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.15em}.svc b{font-size:17px;font-weight:600;display:block}.svc span{font-size:13px;color:rgba(255,255,255,.5)}
+.svc em{font-style:normal;font-weight:600;color:var(--acc);font-size:14px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.st{background:#141414;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:22px 18px}
+.st b{font-family:Anton,sans-serif;font-weight:400;font-size:46px;display:block;line-height:1}.st span{font-size:13px;color:rgba(255,255,255,.55)}
+.st.red{background:var(--acc);border:0}.st.red span{color:rgba(255,255,255,.85)}
+.cta{margin:0 16px 30px;border-radius:32px;padding:38px 24px;background:#141414;position:relative;overflow:hidden}
+.cta:after{content:"";position:absolute;inset:auto -40px -120px auto;width:260px;height:260px;border-radius:50%;border:40px solid rgba(255,59,47,.18)}
+footer{padding:0 22px 40px;font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase}
+</style><link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></head><body>
+<div class="grain"></div>
+<nav class="in" style="animation-delay:.05s"><div class="mark">MOTORLINE<sup>®</sup></div><div class="pill">Programare</div></nav>
+<header class="hero">
+<div class="mega">SERVICE AUTO SERVICE AUTO</div>
+<svg class="rpm" viewBox="0 0 380 380" aria-hidden="true"><circle cx="190" cy="190" r="150" stroke="rgba(255,255,255,.08)" stroke-width="5"/><circle class="arc" cx="190" cy="190" r="150" transform="rotate(130 190 190)"/><g class="needle"><line x1="190" y1="190" x2="190" y2="70" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g><circle cx="190" cy="190" r="10" fill="#fff"/></svg>
+<div class="eyebrow in" style="animation-delay:.2s"><i class="dot"></i>Service auto · Brașov</div>
+<h1 class="in" style="animation-delay:.35s">Service rapid.<br>Gata <span>azi.</span></h1>
+<p class="sub in" style="animation-delay:.5s">Diagnoză computerizată, revizii și frâne. Îți spunem prețul înainte să ridicăm mașina.</p>
+<div class="ctas in" style="animation-delay:.65s"><a class="b1">Sună acum <i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ff3b2f" stroke-width="2.6" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></i></a><a class="b2">WhatsApp</a></div>
+</header>
+<div class="marq"><div>Diagnoză<b>/</b>Revizie<b>/</b>Frâne<b>/</b>Distribuție<b>/</b>Aer condiționat<b>/</b>Diagnoză<b>/</b>Revizie<b>/</b>Frâne<b>/</b>Distribuție<b>/</b>Aer condiționat<b>/</b></div></div>
+<section><div class="lab rv">01 — Servicii</div><h2 class="rv">Ce facem bine</h2>
+<div class="svc rv"><span class="n">01</span><div><b>Diagnoză computerizată</b><span>toate mărcile, 30 de minute</span></div><em>99 lei</em></div>
+<div class="svc rv"><span class="n">02</span><div><b>Revizie completă</b><span>ulei, filtre, verificare 40 puncte</span></div><em>de la 350</em></div>
+<div class="svc rv"><span class="n">03</span><div><b>Plăcuțe și discuri</b><span>piese originale sau echivalente</span></div><em>de la 280</em></div>
+<div class="svc rv"><span class="n">04</span><div><b>Kit distribuție</b><span>cu garanție 12 luni</span></div><em>la cerere</em></div>
+</section>
+<section style="padding-top:0"><div class="lab rv">02 — De ce noi</div><h2 class="rv">Fără surprize</h2>
+<div class="stats"><div class="st red rv"><b>24h</b><span>majoritatea lucrărilor</span></div><div class="st rv"><b>12</b><span>luni garanție</span></div><div class="st rv"><b>3</b><span>elevatoare</span></div><div class="st rv"><b>0</b><span>costuri ascunse</span></div></div></section>
+<div class="cta rv"><div class="lab">Programează-te</div><h2 style="margin-bottom:18px">Intri dimineața.<br>Pleci seara.</h2><a class="b1" style="max-width:240px">Sună acum <i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ff3b2f" stroke-width="2.6" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></i></a></div>
+<footer>Motorline Garage · Brașov · exemplu de site</footer>
+</body></html>

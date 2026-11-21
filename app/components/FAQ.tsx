@@ -11,12 +11,16 @@ const FAQS = [
     a: "Da. Construiesc prima versiune a site-ului fără nicio plată în avans. O vezi, și abia apoi decizi dacă mergem mai departe.",
   },
   {
+    q: "De ce e gratis demo-ul?",
+    a: "Pentru că e cel mai cinstit mod să-ți arăt ce pot. În loc să-ți cer bani pe încredere, investesc eu câteva ore și îți arăt site-ul tău real, cu numele și serviciile tale. Tu decizi după ce îl vezi.",
+  },
+  {
     q: "Ce se întâmplă dacă nu-mi place?",
     a: "Absolut nimic. Nu plătești, nu exiști cu vreo obligație. Am construit procesul așa intenționat, ca riscul să fie al meu, nu al tău.",
   },
   {
     q: "Cât durează să am site-ul complet, nu doar demo-ul?",
-    a: "De obicei 3-5 zile lucrătoare de la momentul în care confirmi că mergem mai departe, în funcție de câte pagini și cât conținut ai pregătit.",
+    a: "În 48 de ore de la momentul în care confirmi că mergem mai departe, pentru un site de prezentare. Pachetele mai mari durează puțin mai mult (vezi prețurile).",
   },
   {
     q: "Mă ocup și de găzduire și domeniu?",

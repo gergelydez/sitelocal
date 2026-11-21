@@ -4,9 +4,9 @@ import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import TrustSection from "./components/TrustSection";
 import HowItWorks from "./components/HowItWorks";
+import Comparison from "./components/Comparison";
 import Niches from "./components/Niches";
 import ProjectsShowcase from "./components/ProjectsShowcase";
-import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import CTABanner from "./components/CTABanner";
 import FAQ from "./components/FAQ";
@@ -24,9 +24,9 @@ export default function Home() {
         <Marquee />
         <TrustSection />
         <HowItWorks />
+        <Comparison />
         <Niches />
         <ProjectsShowcase />
-        <Testimonials />
         <Pricing />
         <CTABanner />
         <FAQ />

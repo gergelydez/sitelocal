@@ -16,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Site Local — Demo gratuit în 3 zile pentru afacerea ta din Maramureș",
+  title: "Site Local — Vezi site-ul afacerii tale înainte să plătești",
   description:
-    "Vezi gratuit cum arată site-ul afacerii tale, construit în 3 zile de un expert local. Plătești doar dacă îți place demo-ul.",
+    "Demo gratuit în 24h, site gata în 48h, 700 lei preț fix. Plătești doar dacă îți place demo-ul.",
 };
 
 // Fallback hardcodat: Pixel ID e o valoare publică (apare oricum în HTML-ul livrat
