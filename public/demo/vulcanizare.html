@@ -69,7 +69,7 @@ h2{font-family:Archivo,sans-serif;font-weight:900;font-size:clamp(32px,5vw,50px)
 .row{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px dashed var(--line);font-size:16px;gap:12px}
 .row:last-child{border:0}.row span{color:#9aa3ac;font-size:13px;display:block;margin-top:2px}
 .row b{font-family:Archivo,sans-serif;font-size:20px;white-space:nowrap}
-.tabs{display:flex;gap:8px;margin-bottom:14px}.tab{padding:9px 16px;border-radius:99px;border:1px solid var(--line);font-weight:700;font-size:14px;color:#9aa3ac}.tab.on{background:var(--y);color:#0b0d10;border-color:var(--y)}
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}.tab{cursor:pointer;background:none;font-family:inherit;padding:9px 16px;border-radius:99px;border:1px solid var(--line);font-weight:700;font-size:14px;color:#9aa3ac}.tab.on{background:var(--y);color:#0b0d10;border-color:var(--y)}
 .season{border-radius:28px;padding:40px 26px;background:linear-gradient(120deg,#ffd21f,#ffb800);color:#0b0d10;position:relative;overflow:hidden}
 .season h2{color:#0b0d10}.season p{font-size:17px;max-width:520px;font-weight:500}
 .snow{position:absolute;right:-40px;top:-40px;width:260px;height:260px;opacity:.18;animation:spin 30s linear infinite}
@@ -77,6 +77,11 @@ h2{font-family:Archivo,sans-serif;font-weight:900;font-size:clamp(32px,5vw,50px)
 .slot{background:rgba(11,13,16,.1);border:2px solid rgba(11,13,16,.25);padding:10px 16px;border-radius:12px;font-weight:800}
 .slot.on{background:#0b0d10;color:var(--y);border-color:#0b0d10}.slot.x{opacity:.35;text-decoration:line-through}
 .bk{background:#0b0d10;color:#fff;font-weight:800;padding:16px 24px;border-radius:14px;display:inline-flex;gap:10px;align-items:center}
+.book{margin-top:22px}.fgrid{display:grid;gap:12px}@media(min-width:700px){.fgrid{grid-template-columns:1fr 1fr}}
+.book label{display:flex;flex-direction:column;gap:6px;font-weight:800;font-size:13px}
+.book input,.book select{font:inherit;font-weight:600;font-size:16px;padding:14px;border-radius:12px;border:2px solid rgba(11,13,16,.2);background:rgba(255,255,255,.75);color:#0b0d10;width:100%}
+.book .full{margin:4px 0 18px}.sl{font-weight:800;font-size:13px;margin-top:16px}
+.slot{cursor:pointer;font:inherit;font-weight:800;color:#0b0d10}.ok{margin-top:14px;font-weight:800;font-size:17px}
 .steps{counter-reset:s}.step{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--line)}
 .step:before{counter-increment:s;content:"0" counter(s);font-family:Archivo,sans-serif;font-weight:900;font-size:30px;color:var(--y);min-width:52px}
 .step b{display:block;font-size:17px;margin-bottom:4px}.step span{color:#9aa3ac;font-size:14.5px}
@@ -152,24 +157,49 @@ footer{border-top:1px solid var(--line);padding:30px 0 100px;color:#7c858f;font-
 
 <section id="preturi" style="padding-top:0"><div class="wrap">
 <div class="lab rv">Prețuri</div><h2 class="rv">Știi prețul înainte</h2><p class="sub rv">Prețuri pentru un set de 4 roți, cu manoperă inclusă.</p>
-<div class="tabs rv"><span class="tab on">Autoturism</span><span class="tab">SUV</span><span class="tab">Utilitară</span></div>
-<div class="price rv">
+<div class="tabs rv" role="tablist"><button class="tab on" data-t="auto">Autoturism</button><button class="tab" data-t="suv">SUV</button><button class="tab" data-t="util">Utilitară</button></div>
+<div class="price rv" data-p="auto">
 <div class="row"><div>Montaj + echilibrare R13–R16<span>jante tablă sau aliaj</span></div><b>120 lei</b></div>
 <div class="row"><div>Montaj + echilibrare R17–R19<span>inclusiv runflat</span></div><b>160 lei</b></div>
 <div class="row"><div>Reparație pană<span>cu garanție 30 de zile</span></div><b>40 lei</b></div>
 <div class="row"><div>Hotel anvelope<span>un sezon, cu spălare inclusă</span></div><b>150 lei</b></div>
 <div class="row"><div>Schimb + hotel<span>pachet sezonier</span></div><b style="color:var(--y)">249 lei</b></div>
-</div></div></section>
+</div>
+<div class="price" data-p="suv" hidden>
+<div class="row"><div>Montaj + echilibrare R16–R18<span>SUV și crossover</span></div><b>180 lei</b></div>
+<div class="row"><div>Montaj + echilibrare R19–R22<span>inclusiv runflat</span></div><b>240 lei</b></div>
+<div class="row"><div>Reparație pană<span>cu garanție 30 de zile</span></div><b>50 lei</b></div>
+<div class="row"><div>Hotel anvelope<span>un sezon, cu spălare inclusă</span></div><b>180 lei</b></div>
+<div class="row"><div>Schimb + hotel<span>pachet sezonier</span></div><b style="color:var(--y)">349 lei</b></div>
+</div>
+<div class="price" data-p="util" hidden>
+<div class="row"><div>Montaj + echilibrare R15C–R16C<span>dube și utilitare ușoare</span></div><b>200 lei</b></div>
+<div class="row"><div>Montaj + echilibrare R17C<span>utilitare mari</span></div><b>260 lei</b></div>
+<div class="row"><div>Reparație pană<span>cu garanție 30 de zile</span></div><b>60 lei</b></div>
+<div class="row"><div>Hotel anvelope<span>un sezon, cu spălare inclusă</span></div><b>200 lei</b></div>
+<div class="row"><div>Schimb + hotel<span>pachet sezonier</span></div><b style="color:var(--y)">379 lei</b></div>
+</div></div></div></section>
 
 <section id="programare" style="padding-top:0"><div class="wrap">
 <div class="season rv">
 <svg class="snow" viewBox="0 0 100 100" fill="none" stroke="#0b0d10" stroke-width="4" stroke-linecap="round"><path d="M50 5v90M11 27l78 46M11 73l78-46M40 12l10 8 10-8M40 88l10-8 10 8"/></svg>
 <div class="lab" style="color:#0b0d10">Sezonul de iarnă</div>
 <h2>Nu sta la coadă la prima ninsoare.</h2>
-<p>Programează-te acum și treci direct la elevator, la ora aleasă de tine.</p>
-<div class="slots"><span class="slot x">09:00</span><span class="slot x">10:30</span><span class="slot">12:00</span><span class="slot on">14:30</span><span class="slot">16:00</span><span class="slot">17:30</span></div>
-<a class="bk" href="#contact">Rezervă ora 14:30 →</a>
-</div></div></section>
+<p>Alege ziua și ora, iar noi te sunăm să confirmăm. Treci direct la elevator, fără coadă.</p>
+<form class="book" data-cms-form id="formProgramare">
+<div class="fgrid">
+<label>Nume<input name="name" required placeholder="Ion Popescu" autocomplete="name"></label>
+<label>Telefon<input name="phone" required type="tel" placeholder="07xx xxx xxx" autocomplete="tel"></label>
+<label>Serviciu<select id="svc"><option>Schimb anvelope (montaj + echilibrare)</option><option>Schimb + hotel anvelope</option><option>Reparație pană</option><option>Îndreptat jante</option><option>Altceva</option></select></label>
+<label>Ziua<input name="checkin" type="date" required id="zi"></label>
+</div>
+<div class="sl">Ora dorită</div>
+<div class="slots" id="ore"><button type="button" class="slot x" disabled>09:00</button><button type="button" class="slot x" disabled>10:30</button><button type="button" class="slot">12:00</button><button type="button" class="slot on">14:30</button><button type="button" class="slot">16:00</button><button type="button" class="slot">17:30</button></div>
+<label class="full">Mașina / observații (opțional)<input id="obs" placeholder="ex. Golf 7, anvelope 205/55 R16"></label>
+<textarea name="message" id="msg" hidden></textarea>
+<button type="submit" class="bk">Trimite programarea →</button>
+<p data-cms-form-success hidden class="ok">✓ Mulțumim! Te sunăm în cel mai scurt timp să confirmăm ora.</p>
+</form></div></div></section>
 
 <section style="padding-top:0"><div class="wrap">
 <div class="lab rv">Cum funcționează</div><h2 class="rv">Simplu, ca la carte</h2>
@@ -197,4 +227,11 @@ footer{border-top:1px solid var(--line);padding:30px 0 100px;color:#7c858f;font-
 
 <footer>Vulcanizare ProGrip · exemplu de site realizat de Site Local · datele sunt fictive</footer>
 <div class="sticky"><a class="s1" href="#contact">Sună acum</a><a class="s2" href="#contact">WhatsApp</a></div>
+<script>
+document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('on',x===t)});document.querySelectorAll('[data-p]').forEach(function(p){p.hidden=p.getAttribute('data-p')!==t.getAttribute('data-t')})})});
+(function(){var f=document.getElementById('formProgramare');if(!f)return;var zi=document.getElementById('zi');var d=new Date();d.setDate(d.getDate()+1);zi.min=new Date().toISOString().slice(0,10);zi.value=d.toISOString().slice(0,10);
+var ora='14:30';document.querySelectorAll('#ore .slot').forEach(function(b){b.addEventListener('click',function(){if(b.disabled)return;document.querySelectorAll('#ore .slot').forEach(function(x){x.classList.toggle('on',x===b)});ora=b.textContent})});
+function compose(){document.getElementById('msg').value='Programare: '+document.getElementById('svc').value+' · ziua '+zi.value+' · ora '+ora+(document.getElementById('obs').value?'\nMașina / observații: '+document.getElementById('obs').value:'')}
+f.addEventListener('submit',function(e){compose();if(!document.querySelector('script[src*="cms.js"]')){e.preventDefault();f.querySelector('[data-cms-form-success]').hidden=false;f.querySelector('[type=submit]').textContent='✓ Trimis'}},true)})();
+</script>
 </body></html>
