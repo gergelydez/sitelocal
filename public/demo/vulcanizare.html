@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vulcanizare ProGrip — Schimb anvelope în 30 de minute</title>
+<meta name="description" content="Montaj și echilibrare anvelope, reparații pane, hotel de anvelope și jante. Programare rapidă, prețuri afișate.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{background:#0b0d10}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;color:#eef1f4;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+:root{--y:#ffd21f;--e:cubic-bezier(.16,1,.3,1);--card:#14181d;--line:rgba(255,255,255,.09)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.in{opacity:0;transform:translateY(26px);filter:blur(8px);animation:in .9s var(--e) forwards}
+@keyframes in{to{opacity:1;transform:none;filter:none}}
+.rv{animation:in linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}}
+.demo{background:var(--y);color:#0b0d10;text-align:center;font-size:12.5px;font-weight:700;padding:8px 12px;letter-spacing:.02em}
+nav{position:sticky;top:0;z-index:20;background:rgba(11,13,16,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Archivo,sans-serif;font-weight:900;font-size:20px;letter-spacing:-.5px}
+.logo i{width:30px;height:30px;border-radius:50%;border:5px solid #eef1f4;position:relative}
+.logo i:after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--y)}
+.logo b{color:var(--y)}
+.navl{display:none;gap:28px;font-size:14.5px;color:#b9c0c8}
+.navcta{background:var(--y);color:#0b0d10;font-weight:800;font-size:14px;padding:10px 16px;border-radius:99px;display:flex;align-items:center;gap:8px}
+@media(min-width:900px){.navl{display:flex}}
+.hero{position:relative;overflow:hidden;padding:46px 0 70px}
+.hero .wrap{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.05fr 1fr}.hero{padding:80px 0 100px}}
+.road{position:absolute;inset:auto -10% -40px -10%;height:220px;background:repeating-linear-gradient(90deg,transparent 0 60px,rgba(255,210,31,.10) 60px 120px);transform:perspective(500px) rotateX(60deg);transform-origin:bottom;animation:road 1.2s linear infinite;opacity:.7}
+@keyframes road{to{background-position:120px 0}}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:7px 14px 7px 8px;border-radius:99px;font-size:13px;font-weight:600;color:#cfd5db}
+.badge span{background:var(--y);color:#0b0d10;font-weight:800;padding:3px 9px;border-radius:99px;font-size:11.5px}
+h1{font-family:Archivo,sans-serif;font-weight:900;font-size:clamp(42px,8.5vw,76px);line-height:.95;letter-spacing:-2px;margin:20px 0 18px;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--y)}
+.lead{font-size:17px;line-height:1.55;color:#b9c0c8;max-width:480px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.b1{background:var(--y);color:#0b0d10;font-weight:800;padding:16px 24px;border-radius:14px;display:inline-flex;gap:10px;align-items:center;font-size:16px;box-shadow:0 14px 40px rgba(255,210,31,.25)}
+.b2{border:1px solid rgba(255,255,255,.2);font-weight:700;padding:16px 22px;border-radius:14px;font-size:16px;display:inline-flex;gap:10px;align-items:center}
+.trust{display:flex;gap:22px;margin-top:28px;flex-wrap:wrap;color:#b9c0c8;font-size:14px}
+.trust b{display:block;font-family:Archivo,sans-serif;font-size:26px;color:#fff}
+.tirebox{position:relative;aspect-ratio:1;max-width:460px;margin:0 auto;width:100%}
+.glow{position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,rgba(255,210,31,.35),transparent 65%);filter:blur(20px)}
+.tire{position:absolute;inset:0;animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.chip{position:absolute;background:rgba(20,24,29,.9);border:1px solid var(--line);backdrop-filter:blur(8px);border-radius:16px;padding:12px 14px;font-size:13px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.chip b{display:block;font-size:15px}.chip small{color:#9aa3ac}
+.c1{left:-4%;top:12%;animation:fl 5s ease-in-out infinite}.c2{right:-2%;bottom:14%;animation:fl 5s ease-in-out 1.2s infinite}
+@keyframes fl{50%{transform:translateY(-10px)}}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:6px;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+.marq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0;background:#0e1115}
+.marq div{display:inline-block;animation:mq 22s linear infinite;font-family:Archivo,sans-serif;font-weight:800;font-size:22px;text-transform:uppercase;color:#cfd5db}
+.marq b{color:var(--y);margin:0 18px}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:80px 0}
+.lab{color:var(--y);font-size:12.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+h2{font-family:Archivo,sans-serif;font-weight:900;font-size:clamp(32px,5vw,50px);line-height:1;letter-spacing:-1px;margin-bottom:14px}
+.sub{color:#9aa3ac;font-size:16px;max-width:560px;margin-bottom:36px}
+.grid{display:grid;gap:14px}
+@media(min-width:700px){.grid.g3{grid-template-columns:repeat(3,1fr)}.grid.g2{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;position:relative;overflow:hidden;transition:transform .4s var(--e),border-color .3s}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,210,31,.4)}
+.ic{width:52px;height:52px;border-radius:14px;background:rgba(255,210,31,.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.ic svg{width:28px;height:28px;stroke:var(--y);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:19px;margin-bottom:6px}.card p{color:#9aa3ac;font-size:14.5px;line-height:1.5}
+.card .pr{margin-top:14px;font-weight:800;color:var(--y);font-size:15px}
+.feat{background:linear-gradient(135deg,#1b1f25,#14181d);}
+.price{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:8px 24px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px dashed var(--line);font-size:16px;gap:12px}
+.row:last-child{border:0}.row span{color:#9aa3ac;font-size:13px;display:block;margin-top:2px}
+.row b{font-family:Archivo,sans-serif;font-size:20px;white-space:nowrap}
+.tabs{display:flex;gap:8px;margin-bottom:14px}.tab{padding:9px 16px;border-radius:99px;border:1px solid var(--line);font-weight:700;font-size:14px;color:#9aa3ac}.tab.on{background:var(--y);color:#0b0d10;border-color:var(--y)}
+.season{border-radius:28px;padding:40px 26px;background:linear-gradient(120deg,#ffd21f,#ffb800);color:#0b0d10;position:relative;overflow:hidden}
+.season h2{color:#0b0d10}.season p{font-size:17px;max-width:520px;font-weight:500}
+.snow{position:absolute;right:-40px;top:-40px;width:260px;height:260px;opacity:.18;animation:spin 30s linear infinite}
+.slots{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.slot{background:rgba(11,13,16,.1);border:2px solid rgba(11,13,16,.25);padding:10px 16px;border-radius:12px;font-weight:800}
+.slot.on{background:#0b0d10;color:var(--y);border-color:#0b0d10}.slot.x{opacity:.35;text-decoration:line-through}
+.bk{background:#0b0d10;color:#fff;font-weight:800;padding:16px 24px;border-radius:14px;display:inline-flex;gap:10px;align-items:center}
+.steps{counter-reset:s}.step{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--line)}
+.step:before{counter-increment:s;content:"0" counter(s);font-family:Archivo,sans-serif;font-weight:900;font-size:30px;color:var(--y);min-width:52px}
+.step b{display:block;font-size:17px;margin-bottom:4px}.step span{color:#9aa3ac;font-size:14.5px}
+.hotel{display:grid;gap:24px;align-items:center}
+@media(min-width:900px){.hotel{grid-template-columns:1fr 1fr}}
+.rack{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.rack i{aspect-ratio:1;border-radius:50%;border:9px solid #2a2f37;background:radial-gradient(circle,#0b0d10 32%,#3a4049 34%,#3a4049 38%,#14181d 40%);position:relative}
+.rack i.f{border-color:#1d2127;box-shadow:inset 0 0 0 3px rgba(255,210,31,.5)}
+.contact{display:grid;gap:14px}
+@media(min-width:900px){.contact{grid-template-columns:1.2fr 1fr}}
+.map{min-height:280px;border-radius:24px;border:1px solid var(--line);background:#11151a;position:relative;overflow:hidden;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:34px 34px}
+.map:before{content:"";position:absolute;left:-10%;right:-10%;top:55%;height:26px;background:#1d2228;transform:rotate(-8deg)}
+.map:after{content:"";position:absolute;left:44%;top:-10%;bottom:-10%;width:22px;background:#1d2228;transform:rotate(12deg)}
+.pin{position:absolute;left:50%;top:48%;transform:translate(-50%,-100%);z-index:2;animation:fl 3s ease-in-out infinite}
+.info .card{display:flex;gap:14px;align-items:center}
+.info b{display:block}.info span{color:#9aa3ac;font-size:14px}
+footer{border-top:1px solid var(--line);padding:30px 0 100px;color:#7c858f;font-size:13px;text-align:center}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;gap:10px}
+.sticky a{flex:1;text-align:center;padding:15px;border-radius:14px;font-weight:800}
+.sticky .s1{background:var(--y);color:#0b0d10}.sticky .s2{background:#22c55e;color:#fff}
+@media(min-width:900px){.sticky{display:none}}
+</style></head><body>
+<div class="demo">EXEMPLU DE SITE · creat de Site Local · nume și date fictive</div>
+<nav><div class="wrap"><a class="logo" href="#"><i></i>Pro<b>Grip</b></a>
+<div class="navl"><a href="#servicii">Servicii</a><a href="#preturi">Prețuri</a><a href="#hotel">Hotel anvelope</a><a href="#contact">Contact</a></div>
+<a class="navcta" href="#programare">Programează-te</a></div></nav>
+
+<header class="hero"><div class="road"></div><div class="wrap">
+<div>
+<div class="badge in" style="animation-delay:.05s"><span>DESCHIS</span>Azi 08:00 – 19:00 · fără cozi</div>
+<h1 class="in" style="animation-delay:.15s">Anvelope schimbate în <em>30 de minute.</em></h1>
+<p class="lead in" style="animation-delay:.28s">Montaj, echilibrare, reparații de pană și hotel de anvelope. Prețuri afișate, fără surprize la final. Bei o cafea și pleci.</p>
+<div class="ctas in" style="animation-delay:.4s">
+<a class="b1" href="#programare"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Programează online</a>
+<a class="b2" href="#contact"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Sună acum</a>
+</div>
+<div class="trust in" style="animation-delay:.52s"><div><b>30 min</b>schimb complet</div><div><b>6 zile</b>pe săptămână</div><div><b>500+</b>seturi în hotel</div></div>
+</div>
+<div class="tirebox in" style="animation-delay:.3s">
+<div class="glow"></div>
+<svg class="tire" viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="rim" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e9edf1"/><stop offset=".7" stop-color="#9aa3ac"/><stop offset="1" stop-color="#5b636c"/></radialGradient></defs>
+<circle cx="200" cy="200" r="190" fill="#16191e"/>
+<g fill="#22262d">
+<g id="tr"><rect x="192" y="8" width="16" height="34" rx="4"/></g>
+<use href="#tr" transform="rotate(15 200 200)"/><use href="#tr" transform="rotate(30 200 200)"/><use href="#tr" transform="rotate(45 200 200)"/><use href="#tr" transform="rotate(60 200 200)"/><use href="#tr" transform="rotate(75 200 200)"/><use href="#tr" transform="rotate(90 200 200)"/><use href="#tr" transform="rotate(105 200 200)"/><use href="#tr" transform="rotate(120 200 200)"/><use href="#tr" transform="rotate(135 200 200)"/><use href="#tr" transform="rotate(150 200 200)"/><use href="#tr" transform="rotate(165 200 200)"/><use href="#tr" transform="rotate(180 200 200)"/><use href="#tr" transform="rotate(195 200 200)"/><use href="#tr" transform="rotate(210 200 200)"/><use href="#tr" transform="rotate(225 200 200)"/><use href="#tr" transform="rotate(240 200 200)"/><use href="#tr" transform="rotate(255 200 200)"/><use href="#tr" transform="rotate(270 200 200)"/><use href="#tr" transform="rotate(285 200 200)"/><use href="#tr" transform="rotate(300 200 200)"/><use href="#tr" transform="rotate(315 200 200)"/><use href="#tr" transform="rotate(330 200 200)"/><use href="#tr" transform="rotate(345 200 200)"/>
+</g>
+<circle cx="200" cy="200" r="138" fill="#0f1114"/>
+<circle cx="200" cy="200" r="118" fill="url(#rim)"/>
+<g fill="#2b3038">
+<path id="sp" d="M190 112h20l10 62h-40z"/>
+<use href="#sp" transform="rotate(72 200 200)"/><use href="#sp" transform="rotate(144 200 200)"/><use href="#sp" transform="rotate(216 200 200)"/><use href="#sp" transform="rotate(288 200 200)"/>
+</g>
+<circle cx="200" cy="200" r="34" fill="#c9cfd5"/><circle cx="200" cy="200" r="14" fill="#ffd21f"/>
+</svg>
+<div class="chip c1"><b><span class="dot"></span>Loc liber azi</b><small>14:30 · 16:00 · 17:30</small></div>
+<div class="chip c2"><b>Montaj + echilibrare</b><small>de la 120 lei / set</small></div>
+</div>
+</div></header>
+
+<div class="marq"><div>Montaj <b>●</b> Echilibrare <b>●</b> Reparații pană <b>●</b> Hotel anvelope <b>●</b> Jante <b>●</b> Azot <b>●</b> Montaj <b>●</b> Echilibrare <b>●</b> Reparații pană <b>●</b> Hotel anvelope <b>●</b> Jante <b>●</b> Azot <b>●</b></div></div>
+
+<section id="servicii"><div class="wrap">
+<div class="lab rv">Servicii</div><h2 class="rv">Tot ce ține de roți</h2><p class="sub rv">Lucrăm pe autoturisme, SUV-uri și utilitare ușoare. Echipamente noi, fără zgârieturi pe jante.</p>
+<div class="grid g3">
+<div class="card feat rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></svg></div><h3>Montaj și echilibrare</h3><p>Schimb sezonier complet, echilibrare computerizată și verificare presiune.</p><div class="pr">de la 120 lei / set</div></div>
+<div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>Reparații pană</h3><p>Cui, șurub sau valvă stricată? Reparăm din interior, cu garanție.</p><div class="pr">de la 40 lei</div></div>
+<div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 15h.01M12 15h.01M16 15h.01"/></svg></div><h3>Hotel de anvelope</h3><p>Îți păstrăm anvelopele curate, etichetate, în spațiu uscat, până la sezonul următor.</p><div class="pr">150 lei / sezon</div></div>
+<div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></div><h3>Anvelope noi</h3><p>Îți aducem anvelopele potrivite în 24h, de la buget la premium.</p><div class="pr">ofertă pe loc</div></div>
+<div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Îndreptat jante</h3><p>Jante de tablă sau aliaj lovite în gropi, readuse la forma corectă.</p><div class="pr">de la 80 lei</div></div>
+<div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg></div><h3>Umflare cu azot</h3><p>Presiune stabilă mai mult timp, uzură uniformă și consum mai mic.</p><div class="pr">10 lei / roată</div></div>
+</div></div></section>
+
+<section id="preturi" style="padding-top:0"><div class="wrap">
+<div class="lab rv">Prețuri</div><h2 class="rv">Știi prețul înainte</h2><p class="sub rv">Prețuri pentru un set de 4 roți, cu manoperă inclusă.</p>
+<div class="tabs rv"><span class="tab on">Autoturism</span><span class="tab">SUV</span><span class="tab">Utilitară</span></div>
+<div class="price rv">
+<div class="row"><div>Montaj + echilibrare R13–R16<span>jante tablă sau aliaj</span></div><b>120 lei</b></div>
+<div class="row"><div>Montaj + echilibrare R17–R19<span>inclusiv runflat</span></div><b>160 lei</b></div>
+<div class="row"><div>Reparație pană<span>cu garanție 30 de zile</span></div><b>40 lei</b></div>
+<div class="row"><div>Hotel anvelope<span>un sezon, cu spălare inclusă</span></div><b>150 lei</b></div>
+<div class="row"><div>Schimb + hotel<span>pachet sezonier</span></div><b style="color:var(--y)">249 lei</b></div>
+</div></div></section>
+
+<section id="programare" style="padding-top:0"><div class="wrap">
+<div class="season rv">
+<svg class="snow" viewBox="0 0 100 100" fill="none" stroke="#0b0d10" stroke-width="4" stroke-linecap="round"><path d="M50 5v90M11 27l78 46M11 73l78-46M40 12l10 8 10-8M40 88l10-8 10 8"/></svg>
+<div class="lab" style="color:#0b0d10">Sezonul de iarnă</div>
+<h2>Nu sta la coadă la prima ninsoare.</h2>
+<p>Programează-te acum și treci direct la elevator, la ora aleasă de tine.</p>
+<div class="slots"><span class="slot x">09:00</span><span class="slot x">10:30</span><span class="slot">12:00</span><span class="slot on">14:30</span><span class="slot">16:00</span><span class="slot">17:30</span></div>
+<a class="bk" href="#contact">Rezervă ora 14:30 →</a>
+</div></div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="lab rv">Cum funcționează</div><h2 class="rv">Simplu, ca la carte</h2>
+<div class="steps">
+<div class="step rv"><div><b>Alegi ora</b><span>Online sau la telefon, în 30 de secunde.</span></div></div>
+<div class="step rv"><div><b>Vii cu mașina</b><span>Intri direct la elevator, fără așteptare.</span></div></div>
+<div class="step rv"><div><b>Pleci în 30 de minute</b><span>Plătești cash sau card și primești bon fiscal.</span></div></div>
+</div></div></section>
+
+<section id="hotel" style="padding-top:0"><div class="wrap"><div class="hotel">
+<div><div class="lab rv">Hotel de anvelope</div><h2 class="rv">Nu le mai cari în balcon.</h2><p class="sub rv" style="margin-bottom:20px">Le spălăm, le verificăm și le păstrăm etichetate cu numărul tău de înmatriculare. La schimb, sunt deja pregătite.</p>
+<a class="b1 rv" href="#contact">Rezervă loc în hotel</a></div>
+<div class="rack rv"><i class="f"></i><i class="f"></i><i></i><i class="f"></i><i></i><i class="f"></i><i class="f"></i><i></i><i class="f"></i><i></i><i class="f"></i><i class="f"></i></div>
+</div></div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap">
+<div class="lab rv">Contact</div><h2 class="rv">Te așteptăm</h2>
+<div class="contact">
+<div class="map rv"><svg class="pin" width="54" height="66" viewBox="0 0 54 66"><path d="M27 64C12 44 3 34 3 24a24 24 0 0 1 48 0c0 10-9 20-24 40z" fill="#ffd21f"/><circle cx="27" cy="24" r="9" fill="#0b0d10"/></svg></div>
+<div class="grid info">
+<div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><div><b>07XX XXX XXX</b><span>sună sau scrie pe WhatsApp</span></div></div>
+<div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><b>Strada Exemplului nr. 1</b><span>parcare proprie pentru clienți</span></div></div>
+<div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><div><b>Luni–Vineri 08–19 · Sâmbătă 08–15</b><span>duminică închis</span></div></div>
+</div></div></div></section>
+
+<footer>Vulcanizare ProGrip · exemplu de site realizat de Site Local · datele sunt fictive</footer>
+<div class="sticky"><a class="s1" href="#contact">Sună acum</a><a class="s2" href="#contact">WhatsApp</a></div>
+</body></html>
