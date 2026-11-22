@@ -18,7 +18,7 @@ export default function Comparison() {
     <section id="comparatie" className="max-w-[880px] mx-auto px-6 py-20 md:py-24">
       <Reveal className="mb-10 text-center">
         <div className="text-trust text-[12.5px] font-semibold uppercase tracking-wider mb-3">
-          De ce sitelocal.ro
+          De ce Site Local
         </div>
         <h2 className="font-display font-bold text-[28px] md:text-[36px] tracking-tight mb-3">
           Același site. <span className="grad-text">Fără riscul tău.</span>
@@ -33,7 +33,7 @@ export default function Comparison() {
         <div className="grid grid-cols-[1.1fr_1fr_1fr] text-[12px] md:text-[13px] font-semibold uppercase tracking-wider border-b border-white/10">
           <div className="p-4 md:p-5 text-muted"> </div>
           <div className="p-4 md:p-5 text-muted text-center">Agenție obișnuită</div>
-          <div className="p-4 md:p-5 text-center text-emerald bg-emerald/[0.07]">sitelocal.ro</div>
+          <div className="p-4 md:p-5 text-center text-emerald bg-emerald/[0.07]">Site Local</div>
         </div>
         <StaggerGroup>
           {ROWS.map((r) => (

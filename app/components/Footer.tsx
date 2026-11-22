@@ -33,7 +33,7 @@ export default function Footer() {
         </nav>
       </div>
       <div className="text-center py-6 px-6 text-muted text-[13px] border-t border-white/8">
-        © sitelocal.ro
+        © Site Local
       </div>
     </footer>
   );
