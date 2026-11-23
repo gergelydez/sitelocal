@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { trackEvent } from "../lib/pixel-client";
-import { WHATSAPP_URL } from "../lib/contact";
+import { PHONE_DISPLAY } from "../lib/contact";
+import WaLink from "./WaLink";
 
 const SCREENS = [
   { src: "/portfolio/auto.jpg", label: "Service auto" },
@@ -101,16 +102,13 @@ export default function Hero() {
           transition={{ duration: 0.65, delay: 0.24 }}
           className="flex flex-col sm:flex-row gap-3 mb-7"
         >
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent("Contact", { content_name: "whatsapp_hero" })}
+          <WaLink
+            source="hero"
             className="btn-shine inline-flex items-center justify-center gap-2.5 bg-emerald hover:bg-emerald/90 text-white font-semibold text-[16px] px-7 py-4 rounded-full shadow-lg shadow-emerald/25"
           >
             <WhatsAppIcon />
             Cere demo-ul pe WhatsApp
-          </a>
+          </WaLink>
           <a
             href="#demo"
             className="inline-flex items-center justify-center gap-2 glass hover:bg-white/[0.06] text-text font-medium text-[15px] px-6 py-4 rounded-full transition-colors"
@@ -118,6 +116,18 @@ export default function Hero() {
             Prefer formularul
           </a>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.65, delay: 0.28 }}
+          className="text-muted text-[14px] -mt-3 mb-6"
+        >
+          Sau scrie-mi direct pe WhatsApp:{" "}
+          <WaLink source="hero_numar" className="text-emerald font-semibold whitespace-nowrap hover:underline">
+            {PHONE_DISPLAY}
+          </WaLink>
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0 }}

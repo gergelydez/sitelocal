@@ -2,7 +2,7 @@
 
 import { Check, X } from "lucide-react";
 import { Reveal, StaggerGroup, StaggerItem } from "./Reveal";
-import { WHATSAPP_URL } from "../lib/contact";
+import WaLink, { WaIcon } from "./WaLink";
 import { trackEvent } from "../lib/pixel-client";
 
 const ROWS = [
@@ -55,15 +55,13 @@ export default function Comparison() {
       </div>
 
       <Reveal className="mt-8 text-center">
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => trackEvent("Contact", { content_name: "whatsapp_comparison" })}
+        <WaLink
+          source="comparison"
           className="btn-shine inline-flex items-center justify-center gap-2.5 bg-emerald hover:bg-emerald/90 text-white font-semibold text-[15.5px] px-7 py-4 rounded-full shadow-lg shadow-emerald/25"
         >
-          Vreau demo-ul gratuit
-        </a>
+          <WaIcon />
+          Vreau demo-ul gratuit pe WhatsApp
+        </WaLink>
         <p className="text-muted text-[12.5px] mt-3">Fără obligații. Nu-ți place demo-ul? Nu plătești nimic.</p>
       </Reveal>
     </section>

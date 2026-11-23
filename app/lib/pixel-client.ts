@@ -1,6 +1,7 @@
 "use client";
 
 import { captureAttribution } from "./attribution-client";
+import { getConsent } from "./consent";
 
 declare global {
   interface Window {
@@ -18,6 +19,8 @@ export function trackEvent(
   customData?: Record<string, unknown>
 ) {
   const eventId = crypto.randomUUID();
+  // Fără acord pentru marketing nu trimitem nimic la Meta (GDPR / ePrivacy).
+  if (getConsent() !== "all") return eventId;
   const attribution = captureAttribution();
 
   if (typeof window !== "undefined" && window.fbq) {

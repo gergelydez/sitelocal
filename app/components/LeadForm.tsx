@@ -1,5 +1,7 @@
 "use client";
 
+import WaLink from "./WaLink";
+
 import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
@@ -88,12 +90,12 @@ export default function LeadForm() {
             În maximum 24 de ore primești gratuit demo-ul live al site-ului
             tău. Îți place? Site-ul complet e gata în 48 de ore.
           </p>
-          <a
-            href="https://wa.me/40758656192"
+          <WaLink
+            source="form_success"
             className="inline-block font-semibold text-[14px] text-trust hover:text-trust/80 transition-colors"
           >
             Sau scrie-mi acum direct pe WhatsApp →
-          </a>
+          </WaLink>
         </motion.div>
       ) : (
         <motion.form
