@@ -19,6 +19,12 @@ const PROJECTS = [
   { name: "Cabinet stomatologic", url: "https://dentist-site-eight.vercel.app/", tag: "Sănătate & Clinici" },
   { name: "Magic Gym", url: "https://magic-gym-mu.vercel.app/", tag: "Fitness & Wellness" },
   { name: "Karma Fitness", url: "https://karma-fitness.vercel.app/", tag: "Sport & Sănătate" },
+  { name: "Han tradițional la munte", url: "https://hanulizvorulrece.ro/", tag: "Cazare & Restaurant" },
+  { name: "Pensiune la munte", url: "https://outreach-pro-app.vercel.app/p/pensiunea-ideal-0f0918", tag: "Cazare" },
+  { name: "Casă de vacanță", url: "https://outreach-pro-app.vercel.app/p/casa-roxana-fa453f", tag: "Cazare" },
+  { name: "Casă de oaspeți", url: "https://outreach-pro-app.vercel.app/p/casa-paula-540ba7", tag: "Cazare" },
+  { name: "Make-up artist", url: "https://outreach-pro-app.vercel.app/p/iris-sandor-machiaj-profesional-sector-1-e2af19", tag: "Beauty" },
+  { name: "Închirieri autocare", url: "https://outreach-pro-app.vercel.app/p/raul-expres-inchirieri-autocare-50b8e0", tag: "Transport & Auto" },
 ];
 
 export default function ProjectsShowcase() {
@@ -76,7 +82,7 @@ export default function ProjectsShowcase() {
         <div className="text-muted text-[13px] font-semibold uppercase tracking-wider mb-4">
           Alte demo-uri live
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           {PROJECTS.map((p) => (
             <a
               key={p.name}
